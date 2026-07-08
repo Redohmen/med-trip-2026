@@ -1,0 +1,784 @@
+<title>Barcelona, a Mediterranean Cruise, and Italy · Aug 2026</title>
+<style>
+  :root{
+    --bg:#E7ECEC; --surface:#F4F7F6; --surface-2:#FCFDFD;
+    --ink:#0E2A34; --ink-soft:#46626B; --ink-faint:#7C949B;
+    --line:#CFDBDB; --line-strong:#B4C6C6;
+    --brass:#8C641B; --brass-fill:#B98A2E; --brass-bright:#C89A3E;
+    --azure:#2C7C9E;
+    --seg-bcn:#c9531f; --seg-sea:#2a78d6; --seg-rome:#cf3b3a; --seg-coda:#0a7d17; --seg-travel:#4a3aa7;
+    --shadow:0 1px 2px rgba(14,42,52,.06), 0 8px 26px rgba(14,42,52,.07);
+    --shadow-soft:0 1px 2px rgba(14,42,52,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#081C25; --surface:#0F2C38; --surface-2:#153845;
+      --ink:#EAF1F1; --ink-soft:#A7BEC4; --ink-faint:#71909A;
+      --line:#204350; --line-strong:#2C5261;
+      --brass:#DcB667; --brass-fill:#C8A24B; --brass-bright:#EBCE82;
+      --azure:#5BB0D0;
+      --seg-bcn:#e07044; --seg-sea:#4e97ea; --seg-rome:#eb7a7a; --seg-coda:#46b552; --seg-travel:#9c92ef;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+      --shadow-soft:0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#081C25; --surface:#0F2C38; --surface-2:#153845;
+    --ink:#EAF1F1; --ink-soft:#A7BEC4; --ink-faint:#71909A;
+    --line:#204350; --line-strong:#2C5261;
+    --brass:#DcB667; --brass-fill:#C8A24B; --brass-bright:#EBCE82;
+    --azure:#5BB0D0;
+    --seg-bcn:#e07044; --seg-sea:#4e97ea; --seg-rome:#eb7a7a; --seg-coda:#46b552; --seg-travel:#9c92ef;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    --shadow-soft:0 1px 2px rgba(0,0,0,.3);
+  }
+  :root[data-theme="light"]{
+    --bg:#E7ECEC; --surface:#F4F7F6; --surface-2:#FCFDFD;
+    --ink:#0E2A34; --ink-soft:#46626B; --ink-faint:#7C949B;
+    --line:#CFDBDB; --line-strong:#B4C6C6;
+    --brass:#8C641B; --brass-fill:#B98A2E; --brass-bright:#C89A3E;
+    --azure:#2C7C9E;
+    --seg-bcn:#c9531f; --seg-sea:#2a78d6; --seg-rome:#cf3b3a; --seg-coda:#0a7d17; --seg-travel:#4a3aa7;
+    --shadow:0 1px 2px rgba(14,42,52,.06), 0 8px 26px rgba(14,42,52,.07);
+    --shadow-soft:0 1px 2px rgba(14,42,52,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{margin:0}
+  .page{background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif}
+  .wrap{max-width:940px; margin:0 auto; padding:0 22px}
+  a{color:var(--brass); text-underline-offset:3px; text-decoration-thickness:1px}
+  a:hover{color:var(--brass-bright)}
+  :focus-visible{outline:2px solid var(--brass-bright); outline-offset:2px; border-radius:3px}
+  .eyebrow{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); font-weight:600}
+  h1,h2,h3{text-wrap:balance; margin:0}
+  .section{padding:60px 0; border-top:1px solid var(--line)}
+  .section-head{margin-bottom:30px}
+  .section-head h2{font-size:clamp(26px,4.4vw,38px); line-height:1.08; font-weight:600; letter-spacing:-.01em; margin:12px 0 0}
+  .section-head p.lede{color:var(--ink-soft); font-size:18px; margin:14px 0 0; max-width:66ch}
+  .controls{position:sticky; top:0; z-index:40; backdrop-filter:saturate(1.3) blur(10px); background:color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--line)}
+  .controls .row{display:flex; flex-wrap:wrap; gap:14px 26px; align-items:center; padding:11px 22px; max-width:940px; margin:0 auto}
+  .controls .brandmark{display:flex; align-items:center; gap:9px; margin-right:auto; font-weight:600; letter-spacing:-.01em}
+  .controls .brandmark .compass{width:19px;height:19px;flex:none;color:var(--brass)}
+  .switch{display:flex; align-items:center; gap:9px}
+  .switch .lbl{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .seg{display:inline-flex; background:var(--surface); border:1px solid var(--line-strong); border-radius:999px; padding:3px; gap:2px}
+  .seg button{font:inherit; font-size:13.5px; font-weight:550; cursor:pointer; border:0; background:transparent; color:var(--ink-soft); padding:5px 13px; border-radius:999px; line-height:1.2; transition:color .15s, background .15s}
+  .seg button[aria-pressed="true"]{background:var(--brass-fill); color:#1a1205}
+  .seg button:hover:not([aria-pressed="true"]){color:var(--ink)}
+  .hero{padding:54px 0 44px}
+  .hero h1{font-size:clamp(34px,6.4vw,60px); line-height:1.02; font-weight:600; letter-spacing:-.02em; margin:20px 0 0}
+  .hero h1 em{font-style:italic; color:var(--brass)}
+  .hero .dek{font-size:clamp(17px,2.3vw,21px); color:var(--ink-soft); max-width:64ch; margin:22px 0 0; line-height:1.5}
+  .statrow{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:14px 17px; box-shadow:var(--shadow-soft); flex:1 1 150px; min-width:140px}
+  .stat .k{font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .stat .v{font-size:22px; font-weight:600; letter-spacing:-.01em; margin-top:5px; line-height:1.12}
+  .stat .v small{font-size:13.5px; font-weight:500; color:var(--ink-soft); display:block; margin-top:2px}
+  .routemap{margin-top:38px; border:1px solid var(--line); background:var(--surface); border-radius:16px; padding:22px 8px 12px; box-shadow:var(--shadow-soft); overflow-x:auto}
+  .routemap svg{display:block; min-width:720px; width:100%; height:auto}
+  .grid{display:grid; gap:16px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:760px){ .g2,.g3{grid-template-columns:1fr} }
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:15px; padding:22px; box-shadow:var(--shadow-soft)}
+  .card h3{font-size:19px; font-weight:600; letter-spacing:-.01em}
+  .ship{position:relative; overflow:hidden}
+  .ship.primary{border-color:color-mix(in srgb,var(--brass-fill) 55%, var(--line))}
+  .ship .flag{position:absolute; top:0; right:0; font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:#1a1205; background:var(--brass-fill); padding:5px 12px; border-bottom-left-radius:11px; z-index:2}
+  .ship .line{font-size:12.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .ship h3{margin:4px 0 2px; font-size:23px}
+  .ship .route{color:var(--azure); font-weight:600; font-size:14.5px; margin-top:2px}
+  .ship .price{font-size:30px; font-weight:600; letter-spacing:-.01em; margin:16px 0 2px}
+  .ship .price small{font-size:14px; color:var(--ink-soft); font-weight:500}
+  .ship ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
+  .ship ul li{position:relative; padding-left:22px; font-size:15px; color:var(--ink-soft); line-height:1.45}
+  .ship ul li::before{content:""; position:absolute; left:2px; top:8px; width:8px; height:8px; border-radius:50%; background:var(--brass-fill)}
+  .ship .btn{display:inline-block; margin-top:18px; font-size:14px; font-weight:600; text-decoration:none; color:#1a1205; background:var(--brass-fill); padding:10px 16px; border-radius:10px; transition:transform .12s, background .15s}
+  .ship .btn:hover{background:var(--brass-bright); transform:translateY(-1px)}
+  .ship .btn.ghost{background:transparent; color:var(--brass); border:1px solid var(--line-strong)}
+  .ship .btn.ghost:hover{border-color:var(--brass); background:transparent}
+  .shipphoto{display:block; width:calc(100% + 44px); height:190px; object-fit:cover; margin:-22px -22px 14px -22px}
+  .credit{font-size:10.5px; color:var(--ink-faint); margin:14px 0 0; line-height:1.4}
+  .banner{position:relative; margin:0 0 4px; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-soft)}
+  .banner img{display:block; width:100%; height:clamp(180px,32vw,300px); object-fit:cover}
+  .banner .bcredit{position:absolute; right:8px; bottom:7px; font-size:10px; color:#fff; background:rgba(0,0,0,.5); padding:2px 8px; border-radius:6px; letter-spacing:.02em}
+  .farechart{margin-top:8px; display:flex; flex-direction:column; gap:13px}
+  .farebar{display:grid; grid-template-columns:132px 1fr; gap:12px; align-items:center}
+  .farebar .fb-name{font-size:13.5px; font-weight:600; text-align:right; color:var(--ink-soft); line-height:1.2}
+  .farebar .fb-name b{display:block; color:var(--ink)}
+  .fb-track{position:relative; height:26px; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; overflow:hidden}
+  .fb-fill{position:absolute; left:0; top:0; bottom:0; border-radius:6px 0 0 6px; display:flex; align-items:center; justify-content:flex-end; padding-right:9px; color:#1a1205; font-size:12.5px; font-weight:700; font-variant-numeric:tabular-nums}
+  .fb-fill.lux{background:var(--brass-fill)}
+  .fb-fill.mid{background:color-mix(in srgb,var(--azure) 42%, var(--surface))}
+  .fb-fill.mid span{color:var(--ink)}
+  @media (max-width:620px){ .farebar{grid-template-columns:96px 1fr} .farebar .fb-name{font-size:12px} }
+  .pitch-ports{list-style:none; margin:0; padding:0; display:flex; flex-direction:column}
+  .pitch-ports li{display:grid; grid-template-columns:150px 1fr; gap:14px; padding:11px 0; border-top:1px solid var(--line); align-items:baseline}
+  .pitch-ports li:first-child{border-top:0}
+  .pitch-ports .pp{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--seg-sea); font-weight:700}
+  .pitch-ports .pd{font-size:15px; color:var(--ink-soft); line-height:1.45}
+  @media (max-width:620px){ .pitch-ports li{grid-template-columns:1fr; gap:2px} }
+  .voyage{position:relative; margin-top:6px}
+  .voyage::before{content:""; position:absolute; left:19px; top:6px; bottom:40px; width:2px; background:linear-gradient(var(--brass-fill), color-mix(in srgb,var(--brass-fill) 25%, transparent)); border-radius:2px}
+  @media (max-width:620px){ .voyage::before{left:13px} }
+  .day{position:relative; margin:0 0 12px 0; padding-left:52px}
+  @media (max-width:620px){ .day{padding-left:40px} }
+  .day > summary{list-style:none; cursor:pointer; display:block; background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:15px 18px; box-shadow:var(--shadow-soft); transition:border-color .15s, box-shadow .15s; position:relative}
+  .day > summary::-webkit-details-marker{display:none}
+  .day > summary:hover{border-color:var(--line-strong); box-shadow:var(--shadow)}
+  .day[open] > summary{border-color:color-mix(in srgb,var(--brass-fill) 45%, var(--line)); border-bottom-left-radius:0; border-bottom-right-radius:0}
+  .node{position:absolute; left:11px; top:20px; width:18px; height:18px; border-radius:50%; background:var(--surface); border:3px solid var(--seg, var(--brass-fill)); box-shadow:0 0 0 3px var(--bg); z-index:2}
+  @media (max-width:620px){ .node{left:5px} }
+  .day.seg-bcn{--seg:var(--seg-bcn)} .day.seg-sea{--seg:var(--seg-sea)} .day.seg-rome{--seg:var(--seg-rome)}
+  .day.seg-coda{--seg:var(--seg-coda)} .day.seg-travel{--seg:var(--seg-travel)}
+  .day .dhead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .day .dnum{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; color:var(--ink-faint); font-weight:600; letter-spacing:.05em}
+  .day .ddate{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12.5px; font-weight:700; color:var(--seg,var(--brass)); letter-spacing:.02em; text-transform:uppercase}
+  .day .dtitle{font-size:18px; font-weight:600; letter-spacing:-.01em; flex-basis:100%; margin-top:1px}
+  .day .dcoord{display:block; font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:11px; letter-spacing:.11em; color:var(--ink-faint); text-transform:uppercase; margin-top:7px}
+  .day .dshort{color:var(--ink-soft); font-size:15px; margin-top:7px; line-height:1.5}
+  .day .chev{position:absolute; right:16px; top:18px; color:var(--ink-faint); transition:transform .2s}
+  .day[open] .chev{transform:rotate(90deg)}
+  .daybody{background:var(--surface-2); border:1px solid color-mix(in srgb,var(--brass-fill) 45%, var(--line)); border-top:0; border-radius:0 0 13px 13px; padding:0 18px 18px; box-shadow:var(--shadow-soft); overflow:hidden}
+  .dayfig{margin:0 -18px 2px; overflow:hidden; background:var(--line)}
+  .dayfig img{display:block; width:100%; height:clamp(180px,26vw,230px); object-fit:cover}
+  .detail{display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--line)}
+  .detail:first-child{border-top:0}
+  .daybody .dayfig + .detail{border-top:0}
+  .detail .dk{flex:none; width:104px; font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--brass); font-weight:700; padding-top:2px}
+  .detail .dv{font-size:15px; color:var(--ink-soft); line-height:1.5}
+  .detail .dv b{color:var(--ink); font-weight:600}
+  @media (max-width:620px){ .detail{flex-direction:column; gap:3px} .detail .dk{width:auto} }
+  #trip[data-coda="cinque"] .day.coda-dol{display:none}
+  #trip[data-coda="dolomites"] .day.coda-cin{display:none}
+  .legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin:20px 0 4px}
+  .legend .li{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft); font-weight:550}
+  .legend .dot{width:11px; height:11px; border-radius:50%; flex:none}
+  .xp{display:flex; flex-direction:column; gap:8px}
+  .xp .xhead{display:flex; align-items:center; gap:9px}
+  .xp .dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .xp .place{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); font-weight:700}
+  .xp h3{font-size:17.5px; font-weight:600; letter-spacing:-.01em; line-height:1.2}
+  .xp .meta{display:flex; flex-wrap:wrap; gap:7px; margin-top:2px}
+  .chip{font-size:11.5px; font-weight:650; padding:3px 9px; border-radius:7px; background:var(--surface-2); border:1px solid var(--line); color:var(--ink-soft)}
+  .chip.guided{background:color-mix(in srgb,var(--brass-fill) 18%, var(--surface)); border-color:color-mix(in srgb,var(--brass-fill) 34%, transparent); color:var(--brass)}
+  .chip.self{background:color-mix(in srgb,var(--azure) 16%, var(--surface)); border-color:color-mix(in srgb,var(--azure) 30%, transparent); color:var(--azure)}
+  .xp .why{font-size:14px; color:var(--ink-soft); line-height:1.45; margin-top:4px}
+  .budget-wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:26px; align-items:start}
+  @media (max-width:820px){ .budget-wrap{grid-template-columns:1fr} }
+  table.bt{width:100%; border-collapse:collapse; font-size:15px}
+  table.bt th,table.bt td{padding:9px 8px; text-align:right; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+  table.bt th:first-child,table.bt td:first-child{text-align:left}
+  table.bt thead th{font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-faint); font-weight:700; border-bottom-color:var(--line-strong)}
+  table.bt td.item{color:var(--ink); font-weight:550}
+  table.bt tr.total td{border-top:2px solid var(--line-strong); border-bottom:0; font-weight:700; color:var(--ink); font-size:16px; padding-top:12px}
+  table.bt td.typ{color:var(--ink); font-weight:600}
+  .bud-bars{display:flex; flex-direction:column; gap:11px}
+  .bbar{display:flex; flex-direction:column; gap:4px}
+  .bbar .bb-top{display:flex; justify-content:space-between; font-size:13.5px}
+  .bbar .bb-name{color:var(--ink-soft); font-weight:600}
+  .bbar .bb-val{color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums}
+  .bb-track{height:12px; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; overflow:hidden}
+  .bb-fill{height:100%; background:var(--brass-fill); border-radius:6px}
+  .bbar.hero-bar .bb-fill{background:var(--brass-bright)}
+  .callout{background:color-mix(in srgb,var(--brass-fill) 10%, var(--surface)); border:1px solid color-mix(in srgb,var(--brass-fill) 32%, var(--line)); border-radius:13px; padding:16px 18px}
+  .callout .k{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); font-weight:700}
+  .callout p{margin:6px 0 0; font-size:15px; color:var(--ink-soft)}
+  .checklist{display:flex; flex-direction:column; gap:10px; counter-reset:ck}
+  .ci{display:flex; gap:15px; background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:15px 18px; box-shadow:var(--shadow-soft)}
+  .ci::before{counter-increment:ck; content:counter(ck,decimal-leading-zero); font-family:ui-monospace,monospace; font-size:13px; font-weight:700; color:var(--brass); flex:none; padding-top:2px; min-width:26px}
+  .ci .ct{flex:1}
+  .ci .ct h4{margin:0; font-size:16px; font-weight:600}
+  .ci .ct p{margin:3px 0 0; font-size:14px; color:var(--ink-soft)}
+  .ci .when{flex:none; font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); align-self:center; text-align:right; max-width:110px}
+  .ci.perish{border-color:color-mix(in srgb,var(--brass-fill) 50%, var(--line))}
+  .ci.perish .when{color:var(--brass)}
+  .foot{padding:44px 0 60px; border-top:1px solid var(--line); color:var(--ink-faint); font-size:13.5px}
+  .foot h4{color:var(--ink-soft); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 10px}
+  .foot .fl{display:flex; flex-wrap:wrap; gap:6px 16px; margin-bottom:18px}
+  .verify{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 18px; line-height:1.55}
+  .verify b{color:var(--ink)}
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none} }
+</style>
+
+<div class="page">
+
+  <div class="controls">
+    <div class="row">
+      <span class="brandmark">
+        <svg class="compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke-width="1.2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor" stroke="none"/></svg>
+        Barcelona → Rome · Aug&nbsp;2026
+      </span>
+      <span class="switch">
+        <span class="lbl">Last leg</span>
+        <span class="seg" role="group" aria-label="Choose the final hiking days">
+          <button data-set-coda="cinque" aria-pressed="true">Cinque Terre</button>
+          <button data-set-coda="dolomites" aria-pressed="false">Dolomites</button>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <header class="hero wrap">
+    <span class="eyebrow">August 2026 · sixteen days · Chicago to Rome</span>
+    <h1 class="serif">Barcelona, a Mediterranean <em>cruise</em>, and Italy.</h1>
+    <p class="dek">You spend three days in Barcelona, take a seven-night cruise from Barcelona to Rome with your mother, then travel Italy on your own for Rome and a few days of hiking. The pace stays calm and most of the sightseeing is guided.</p>
+
+    <div class="statrow">
+      <div class="stat"><div class="k">Dates</div><div class="v">Jul 30 – Aug 16<small>2026</small></div></div>
+      <div class="stat"><div class="k">Route</div><div class="v">Barcelona to Rome<small>by sea</small></div></div>
+      <div class="stat"><div class="k">The cruise</div><div class="v">7 nights<small>Explora I, all-inclusive</small></div></div>
+      <div class="stat"><div class="k">Ports</div><div class="v">5 stops<small>across 4 countries</small></div></div>
+    </div>
+
+    <div class="routemap" aria-label="Route from Barcelona through the western Mediterranean to Rome, then north to Cinque Terre and Milan">
+      <svg viewBox="0 0 900 150" role="img">
+        <title>Route from Barcelona through the western Mediterranean to Rome, then Cinque Terre and Milan</title>
+        <defs><linearGradient id="rl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--brass-fill)"/><stop offset="1" stop-color="var(--brass-bright)"/></linearGradient></defs>
+        <path d="M40 96 C 150 96, 150 60, 250 60 S 380 108, 470 100 S 620 118, 690 92 S 800 70, 860 46" fill="none" stroke="url(#rl)" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+        <g font-family="ui-monospace,monospace" font-size="11" font-weight="700" text-anchor="middle">
+          <g><circle cx="40" cy="96" r="6" fill="var(--seg-bcn)"/><text x="40" y="120" fill="var(--ink)">BARCELONA</text><text x="40" y="134" fill="var(--ink-faint)" font-size="9">BOARD</text></g>
+          <circle cx="150" cy="72" r="4.5" fill="var(--seg-sea)"/><text x="150" y="58" fill="var(--ink-soft)" font-size="10">Ibiza</text>
+          <circle cx="250" cy="60" r="4.5" fill="var(--seg-sea)"/><text x="250" y="46" fill="var(--ink-soft)" font-size="10">Tunis</text>
+          <circle cx="360" cy="86" r="4.5" fill="var(--seg-sea)"/><text x="360" y="106" fill="var(--ink-soft)" font-size="10">Valletta</text>
+          <circle cx="470" cy="100" r="4.5" fill="var(--seg-sea)"/><text x="470" y="120" fill="var(--ink-soft)" font-size="10">Taormina</text>
+          <circle cx="560" cy="106" r="4.5" fill="var(--seg-sea)"/><text x="560" y="126" fill="var(--ink-soft)" font-size="10">Sorrento</text>
+          <g><circle cx="670" cy="96" r="6" fill="var(--seg-rome)"/><text x="670" y="120" fill="var(--ink)">ROME</text><text x="670" y="134" fill="var(--ink-faint)" font-size="9">SHIP ENDS</text></g>
+          <circle cx="775" cy="66" r="5" fill="var(--seg-coda)"/><text x="775" y="52" fill="var(--ink-soft)" font-size="10">Cinque Terre</text>
+          <g><circle cx="860" cy="46" r="5.5" fill="var(--seg-travel)"/><text x="856" y="32" fill="var(--ink)" font-size="10">MILAN ✈</text></g>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <section class="section" id="cruise">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Book this first</span>
+        <h2 class="serif">Choose the ship</h2>
+        <p class="lede">Which city you fly into, how simple your mother's trip stays, and where the hiking lands all follow from this one choice. Two luxury sailings fit the window. Both are calm, all-inclusive, and end in Rome. Cabins for early August are booking now, so lock this piece first.</p>
+      </div>
+
+      <div class="grid g2 reveal">
+        <div class="card ship primary">
+          <span class="flag">Recommended</span>
+          <img class="shipphoto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Explora_I%2C_Monaco_%2820260620-IMG_3838%29.jpg/1280px-Explora_I%2C_Monaco_%2820260620-IMG_3838%29.jpg" alt="The cruise ship Explora I moored in Monaco">
+          <div class="line">Explora Journeys · Explora I</div>
+          <h3 class="serif">Barcelona to Rome</h3>
+          <div class="route">Mon Aug 3 · 7 nights</div>
+          <div class="price">$5,935<small> / person · verified live Jul 8</small></div>
+          <ul>
+            <li>Boards in Barcelona and ends in Rome, so your Spain days and your Italy days connect with no extra travel.</li>
+            <li>Stops at Ibiza (overnight), Tunis and Carthage, Valletta, Taormina and Etna, Sorrento.</li>
+            <li>Every room is a suite. One price covers dining, drinks, wifi, tips, and shuttles into town.</li>
+            <li>Fits you and your mother on age and pace. The solo rate adds about 25%, sometimes nothing.</li>
+          </ul>
+          <a class="btn" href="https://explorajourneys.com/us/en/destinations-globe/med/journeys/bcncvv-07-v11?id-journey=EX20260803BCNCVV" target="_blank" rel="noopener">Open the sailing ↗</a>
+          <p class="credit">Photo: Matti Blume / Wikimedia Commons / CC BY-SA 2.0</p>
+        </div>
+
+        <div class="card ship">
+          <img class="shipphoto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/SILVER_RAY_%2854516976411%29.jpg/1280px-SILVER_RAY_%2854516976411%29.jpg" alt="The cruise ship Silver Ray at sea">
+          <div class="line">Silversea · Silver Ray</div>
+          <h3 class="serif">Monte Carlo to Rome</h3>
+          <div class="route">Sun Aug 2 · 7 nights</div>
+          <div class="price">$5,600<small> / person · Classic Veranda, verified Jul 8</small></div>
+          <ul>
+            <li>The scenery route: Portofino, Tuscany (Florence and Pisa), Porto Santo Stefano, Sorrento.</li>
+            <li>Ultra-luxury with a butler in every suite. Port times are already published.</li>
+            <li>Starts in Monte Carlo, so you fly Barcelona to Nice first, or trade the Spain days for the French Riviera.</li>
+            <li>The solo rate on this date runs higher, about 72%.</li>
+          </ul>
+          <a class="btn ghost" href="https://www.silversea.com/destinations/mediterranean-cruise/monte-carlo-to-civitavecchia-rome-ra260802007" target="_blank" rel="noopener">Open the sailing ↗</a>
+          <p class="credit">Photo: Alexandre Prevot / Wikimedia Commons / CC BY-SA 2.0</p>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:16px">
+        <h3 class="serif" style="margin-bottom:4px">How the fares stack up</h3>
+        <p style="color:var(--ink-soft); font-size:14.5px; margin:0 0 18px">Per person, lead-in suite, taxes in. The two luxury fares are verified live from Explora and Silversea on Jul 8, 2026, and both were on promotion (cut from $6,250 and $8,000). The two cheaper ships are aggregator lead-ins, so confirm those at booking.</p>
+        <div class="farechart">
+          <div class="farebar"><div class="fb-name"><b>Explora I</b>Barcelona to Rome, lux</div><div class="fb-track"><div class="fb-fill lux" style="width:90%"><span>$5,935</span></div></div></div>
+          <div class="farebar"><div class="fb-name"><b>Silver Ray</b>Monte Carlo to Rome, lux</div><div class="fb-track"><div class="fb-fill lux" style="width:85%"><span>$5,600</span></div></div></div>
+          <div class="farebar"><div class="fb-name"><b>Legend of the Seas</b>Royal Caribbean, Aug 9</div><div class="fb-track"><div class="fb-fill mid" style="width:33%"><span>$2,064</span></div></div></div>
+          <div class="farebar"><div class="fb-name"><b>MSC Grandiosa</b>value, Aug 8</div><div class="fb-track"><div class="fb-fill mid" style="width:20%"><span>$1,167</span></div></div></div>
+        </div>
+        <p style="color:var(--ink-soft); font-size:14px; margin:16px 0 0">The two cheaper ships keep your original Aug 3 flight and still stop at La Spezia (for Cinque Terre) and Rome, so they work as a backup if luxury availability slips. Celebrity Xcel's Aug 8 sailing goes to Greece and Turkey, a different trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aboard">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">For your mom</span>
+        <h2 class="serif">What the week aboard looks like</h2>
+        <p class="lede">If she is deciding whether to come, here is the plain version of what the seven nights involve.</p>
+      </div>
+
+      <div class="banner reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cruising_into_the_sunset_%28Explored%29_-_Flickr_-_M_McBey.jpg/1280px-Cruising_into_the_sunset_%28Explored%29_-_Flickr_-_M_McBey.jpg" alt="A cruise ship at sea at sunset in the Mediterranean"><span class="bcredit">Photo: Mike McBey / Wikimedia Commons / CC BY 2.0</span></div>
+
+      <div class="grid g2 reveal">
+        <div class="card"><h3 class="serif">The ship</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">Explora I is a small luxury ship, around 900 guests, so it stays quiet. Every room is a suite with an ocean view and a private terrace. It has a doctor, laundry, a spa, and a pool on board.</p></div>
+        <div class="card"><h3 class="serif">One price, no add-ons</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">The fare covers all meals across nine restaurants, all drinks, wifi, and tips. The shuttle into each town comes with it. Nothing gets added to a bill during the week.</p></div>
+        <div class="card"><h3 class="serif">The daily rhythm</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">You unpack once. The ship moves at night, so you wake up somewhere new each morning. Every day you decide to take a guided tour in port or stay aboard. You have dinner together each night with no reservation to chase.</p></div>
+        <div class="card"><h3 class="serif">Why it fits the two of you</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">No long drives and no dragging suitcases between hotels. You see five places in a week at a steady pace. It works for a mother and son who want to cover ground without rushing.</p></div>
+      </div>
+
+      <div class="card reveal" style="margin-top:16px">
+        <h3 class="serif" style="margin-bottom:12px">The route, one stop at a time</h3>
+        <ul class="pitch-ports">
+          <li><span class="pp">Barcelona</span><span class="pd">Board Monday evening and sail overnight.</span></li>
+          <li><span class="pp">Ibiza</span><span class="pd">Walk the old walled town, Dalt Vila. The ship stays overnight, so you have the evening ashore.</span></li>
+          <li><span class="pp">Tunis</span><span class="pd">See the ruins of Carthage and the blue-and-white village of Sidi Bou Said.</span></li>
+          <li><span class="pp">Valletta, Malta</span><span class="pd">A walled capital with a Caravaggio in the cathedral, plus the old town of Mdina.</span></li>
+          <li><span class="pp">Taormina, Sicily</span><span class="pd">A Greek theatre above the sea, with Mount Etna behind it.</span></li>
+          <li><span class="pp">Sorrento</span><span class="pd">A base for Pompeii, Capri, or the Amalfi Coast.</span></li>
+          <li><span class="pp">Rome</span><span class="pd">Arrive Monday morning. The cruise ends here and your mother flies home.</span></li>
+        </ul>
+      </div>
+
+      <div class="callout reveal" style="margin-top:16px">
+        <div class="k">If she would rather not cruise</div>
+        <p>This plan puts your mother on the ship the whole week. If she prefers to skip the cruise, I built the land version too: it flies you to the Amalfi Coast, gives her five days in Sorrento, and costs about half as much. <a href="./land.html" target="_blank" rel="noopener">Open the land version →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="itinerary">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Day by day</span>
+        <h2 class="serif">The itinerary, start to finish</h2>
+        <p class="lede">Every day is laid out below. The switch up top sets your last leg: the coast at Cinque Terre, or the mountains in the Dolomites.</p>
+      </div>
+
+      <div class="callout reveal" style="margin-bottom:22px">
+        <div class="k">Want more time in Spain?</div>
+        <p>The only fixed point up front is boarding on Monday, Aug 3. Three days in Barcelona is comfortable. To add a fourth, fly out Wednesday, Jul 29, and spend a day on a Girona and Costa Brava trip, an afternoon in the Penedès cava country, or a morning at the beach town of Sitges.</p>
+      </div>
+
+      <div class="legend reveal" aria-hidden="true">
+        <span class="li"><span class="dot" style="background:var(--seg-travel)"></span>Travel</span>
+        <span class="li"><span class="dot" style="background:var(--seg-bcn)"></span>Barcelona</span>
+        <span class="li"><span class="dot" style="background:var(--seg-sea)"></span>At sea and ports</span>
+        <span class="li"><span class="dot" style="background:var(--seg-rome)"></span>Rome</span>
+        <span class="li"><span class="dot" style="background:var(--seg-coda)"></span>Last leg</span>
+      </div>
+
+      <div id="trip" data-coda="cinque">
+        <div class="voyage">
+
+          <details class="day seg-travel" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 01</span><span class="ddate">Thu · Jul 30</span><span class="dtitle serif">Fly to Barcelona</span></div>
+            <span class="dcoord">CHICAGO ORD · 41.9°N 87.9°W</span>
+            <p class="dshort">You catch an evening flight out of O'Hare and cross the Atlantic overnight, about eight and a half hours in the air. Eat, watch a film, and try to sleep, because you land in Barcelona around midday and the day is yours.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Flight</span><span class="dv">United, American, Iberia, and Level all fly nonstop from Chicago to Barcelona. An evening departure lands you late morning the next day.</span></div>
+              <div class="detail"><span class="dk">Why Thursday</span><span class="dv">Leaving Thursday buys you a full day at Montserrat later. If you want the trip closer to two weeks, fly out Friday the 31st and trim the Montserrat morning.</span></div>
+            </div></details>
+
+          <details class="day seg-bcn" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 02</span><span class="ddate">Fri · Jul 31</span><span class="dtitle serif">Land in Barcelona, ease in</span></div>
+            <span class="dcoord">BARCELONA · 41.4°N 2.17°E</span>
+            <p class="dshort">You arrive jet-lagged, so the day stays light on purpose. Drop your bags, then walk into the Gothic Quarter, the tangle of medieval lanes behind the cathedral where half the fun is getting a little lost. Lunch is standing at a market counter, and the evening is a food tour that hands you a table full of people on your first night.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Afternoon</span><span class="dv">Wander the Gothic Quarter and the cathedral cloister with its resident geese. For lunch, squeeze onto a stool at <b>La Boqueria</b>: El Quim plates fried eggs over baby squid, and Bar Pinotxo has served chickpeas and cuttlefish since 1952. Both are walk-in and built for a solo diner at the bar.</span></div>
+              <div class="detail"><span class="dk">Evening</span><span class="dv">Book the small-group <b>tapas and wine walk</b> through El Born (The Barcelona Taste, eight people max, about $95 to $130). You hit a few family-run bars, someone pours you cava, and you have people to eat with on night one.</span></div>
+              <div class="detail"><span class="dk">Good to know</span><span class="dv">La Rambla and the market are the city's pickpocket hotspots. Keep your bag zipped and in front, and your phone off the café table.</span></div>
+            </div></details>
+
+          <details class="day seg-bcn" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 03</span><span class="ddate">Sat · Aug 1</span><span class="dtitle serif">Montserrat and the summit hike</span></div>
+            <span class="dcoord">MONTSERRAT · 41.6°N 1.83°E · 1,236 m</span>
+            <p class="dshort">You spend the day on a serrated mountain an hour outside the city, at a Benedictine monastery wedged into the rock since the Middle Ages. There is a real hike up top, the venerated Black Madonna down in the basilica, and a horizon that reaches the Pyrenees on a clear day. Bring a layer; the summit runs cooler and windier than the city.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Montserrat_Abbey_%26_Basilica_%2839195275235%29.jpg/960px-Montserrat_Abbey_%26_Basilica_%2839195275235%29.jpg" alt="Montserrat monastery among the mountain's rock pinnacles" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Getting there</span><span class="dv">Take the FGC <b>R5</b> from Plaça d'Espanya, about an hour to the mountain base, then the cable car or rack railway up. The <b>Trans Montserrat</b> pass (€43.80) bundles the metro, the train, the ride up, and the funiculars.</span></div>
+              <div class="detail"><span class="dk">The hike</span><span class="dv">Ride the Sant Joan funicular to the upper station, then walk the ridge to the <b>Sant Jeroni</b> summit, the highest point at 1,236 m, for a full turn of the horizon. For a longer day, skip the funicular and climb the whole loop from the monastery, about 10.5 km over four hours.</span></div>
+              <div class="detail"><span class="dk">At the monastery</span><span class="dv">The basilica holds <b>La Moreneta</b>, the black Madonna carved in wood; you file past her in a side chapel (monastery ticket €18, shoulders and knees covered). The boys' choir that usually sings here is on summer break until around Aug 20.</span></div>
+              <div class="detail"><span class="dk">Bring</span><span class="dv">Water, a hat, sunscreen, and a windbreaker for the wind up top.</span></div>
+            </div></details>
+
+          <details class="day seg-bcn" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 04</span><span class="ddate">Sun · Aug 2</span><span class="dtitle serif">Mass at Sagrada, then Gaudí</span></div>
+            <span class="dcoord">SAGRADA FAMÍLIA · 41.40°N 2.17°E</span>
+            <p class="dshort">You start the morning inside Gaudí's basilica during the free Sunday Mass, when the forest of stone columns fills with colored light and the space is used for what it was built for. The rest of the day is the city's Gaudí greatest hits: the mosaics of Park Güell and, if you book it, a climb up one of the Sagrada's towers.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nave_of_Sagrada_Fam%C3%ADlia%2C_Barcelona%2C_2023.jpg/1280px-Nave_of_Sagrada_Fam%C3%ADlia%2C_Barcelona%2C_2023.jpg" alt="The nave of the Sagrada Família with its tree-like columns and colored light" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Morning</span><span class="dv">The <b>9:00am international Mass</b> at Sagrada Família is free and needs no ticket. Doors open at 8:30 at the Nativity façade on Carrer de la Marina; arrive early for a seat, since it fills. You sit in the nave for the service, and the stained glass at that hour is the whole point. Check the basilica is open first, since a centenary-year works notice went up.</span></div>
+              <div class="detail"><span class="dk">Park Güell</span><span class="dv">Book a slot around 10:30 for the monumental zone (€18, timed entry only): the terrace with the wave-shaped tiled bench and the mosaic lizard.</span></div>
+              <div class="detail"><span class="dk">Afternoon</span><span class="dv">Book a separate <b>Sagrada tour-and-tower</b> ticket (€36) to ride the elevator up a spire and look down the length of the nave. For a quieter service, Barcelona Cathedral has Mass at 10:30 and Santa Maria del Mar an international Mass at noon.</span></div>
+              <div class="detail"><span class="dk">Mom</span><span class="dv">Your mother flies into Barcelona today. Meet for dinner in El Born before you both board tomorrow.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 05</span><span class="ddate">Mon · Aug 3</span><span class="dtitle serif">Board Explora I</span></div>
+            <span class="dcoord">PORT DE BARCELONA · MOLL ADOSSAT</span>
+            <p class="dshort">The morning is loose: coffee, a last walk, packing. Around midday you take a cab down to the cruise terminal, step aboard, and the week changes gear. You unpack once, the ship handles the rest, and by evening you are at dinner watching Barcelona slide away.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">To the ship</span><span class="dv">A taxi to Moll Adossat runs about €25 to €30 and takes ten to fifteen minutes. Confirm which terminal (A to E) your ship uses before you go.</span></div>
+              <div class="detail"><span class="dk">All-inclusive</span><span class="dv">Every cabin is a suite. The fare already covers your meals across nine restaurants, every drink from espresso to champagne, the wifi, the crew tips, and the shuttle into each town. You sign for nothing all week except a spa treatment or a specialty dinner if you choose one.</span></div>
+              <div class="detail"><span class="dk">Mom</span><span class="dv">Your mother boards with you and takes the second bed in the suite. Tonight is the first of seven dinners together.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 06</span><span class="ddate">Tue · Aug 4</span><span class="dtitle serif">Ibiza, overnight in port</span></div>
+            <span class="dcoord">IBIZA · 38.9°N 1.43°E</span>
+            <p class="dshort">Ibiza is famous for its clubs. Your day is the other Ibiza: up in Dalt Vila, the walled old town that climbs to a cathedral and a set of ramparts over the harbor. The ship stays in port overnight, so you have the full evening ashore with no rush back.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Up top</span><span class="dv">Walk up through the stone gate into <b>Dalt Vila</b>, the UNESCO-listed old town. The lanes wind up to the cathedral and the castle walls, where the view runs back over the marina and out to sea. Late-afternoon light is the best of it.</span></div>
+              <div class="detail"><span class="dk">On the water</span><span class="dv">For a day on the sea, take a small boat to the quiet coves on the north shore or across to Formentera for clear water and a beach lunch.</span></div>
+              <div class="detail"><span class="dk">The overnight</span><span class="dv">Because the ship sleeps in port, dinner ashore is unhurried and you stroll back whenever you like.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 07</span><span class="ddate">Wed · Aug 5</span><span class="dtitle serif">Carthage and Sidi Bou Said</span></div>
+            <span class="dcoord">TUNIS · LA GOULETTE · 36.8°N 10.3°E</span>
+            <p class="dshort">This is the day the trip goes somewhere genuinely far from home. You dock in Tunisia and drive out to Carthage, the Phoenician and later Roman city that Rome spent three wars destroying, now a spread of ruins above the sea. Then up to Sidi Bou Said, a clifftop village painted in blue and white, for mint tea on a terrace over the water.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/View_of_Sidi_Bou_Said_port._Northern_Tunisia%2C_Mediterranean_Sea%2C_Northern_Africa.jpg/1280px-View_of_Sidi_Bou_Said_port._Northern_Tunisia%2C_Mediterranean_Sea%2C_Northern_Africa.jpg" alt="The blue-and-white clifftop terraces of Sidi Bou Said above the marina" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Carthage</span><span class="dv">Book a half-day tour with a local guide. You walk the Antonine Baths and the hill where the city stood, with the Bay of Tunis below. A guide earns its keep here, since the site is spread out and the history runs deep.</span></div>
+              <div class="detail"><span class="dk">Sidi Bou Said</span><span class="dv">The village is cobalt doors, white walls, and bougainvillea along a ridge. Have mint tea with pine nuts at a café terrace above the marina and browse the small shops.</span></div>
+              <div class="detail"><span class="dk">Good to know</span><span class="dv">Dress modestly, carry some cash, and agree the price of any taxi or tour before you set off.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 08</span><span class="ddate">Thu · Aug 6</span><span class="dtitle serif">Valletta and Mdina, Malta</span></div>
+            <span class="dcoord">VALLETTA · 35.9°N 14.5°E</span>
+            <p class="dshort">Malta is a small, sun-baked island with an outsized history, built by the Knights of St. John. You explore Valletta, the honey-colored fortress capital, step into a cathedral that holds a Caravaggio, and drive up to Mdina, the old walled town so quiet they call it the Silent City.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Valletta</span><span class="dv">The capital is compact and walkable straight off the ship, a grid of golden limestone streets that drop toward the Grand Harbour. <b>St. John's Co-Cathedral</b> looks plain outside and is pure baroque gold within, and it holds Caravaggio's Beheading of St. John, his largest canvas.</span></div>
+              <div class="detail"><span class="dk">Mdina</span><span class="dv">Ride up to <b>Mdina</b>, the medieval walled town on a hill in the island's center. Cars are mostly banned, the lanes are silent, and the bastion walls look out over half of Malta.</span></div>
+              <div class="detail"><span class="dk">A quiet minute</span><span class="dv">Both the co-cathedral and Mdina's cathedral are working churches, and empty enough for a few minutes on your own.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 09</span><span class="ddate">Fri · Aug 7</span><span class="dtitle serif">Taormina and Mount Etna</span></div>
+            <span class="dcoord">TAORMINA · 37.85°N 15.29°E</span>
+            <p class="dshort">You tender into Sicily below Taormina, a cliff town wrapped around an ancient Greek theater with Mount Etna smoking in the distance. The volcano is the day's headline: a 4x4 up the black lava slopes and a walk along a crater rim, Europe's largest active volcano under your boots.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sicily_Taormina_Teatro_Greco_Etna.jpg/1280px-Sicily_Taormina_Teatro_Greco_Etna.jpg" alt="The ancient Greek theatre of Taormina with Mount Etna behind it" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Etna</span><span class="dv">Book the ship's excursion or a private guide up Etna. You ride to around 1,900 m, then walk the rim of an old crater across cinder and lava, with the coast spread out below. Wear closed shoes and bring a layer; it is cool and windy at altitude even in August.</span></div>
+              <div class="detail"><span class="dk">Taormina</span><span class="dv">The Teatro Antico is a Greek theater the Romans rebuilt, and from the top row Etna frames the stage. The town is a stack of terraces and cafés, with a small beach at Isola Bella below.</span></div>
+              <div class="detail"><span class="dk">Getting ashore</span><span class="dv">The ship tenders in at Giardini-Naxos, a short ride below the town.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 10</span><span class="ddate">Sat · Aug 8</span><span class="dtitle serif">Sorrento, your pick</span></div>
+            <span class="dcoord">SORRENTO · 40.6°N 14.4°E</span>
+            <p class="dshort">Sorrento sits on a cliff over the Bay of Naples, a base for three very different days. You pick one: the buried Roman city of Pompeii with Vesuvius behind it, the island of Capri by boat, or a cliff-top hike along the Path of the Gods high over the Amalfi Coast.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Positano_panorama.jpg/1280px-Positano_panorama.jpg" alt="Positano's pastel houses cascading down the cliff to the sea" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Choose your day</span><span class="dv"><b>Pompeii and Vesuvius</b> for the archaeology, a full Roman town frozen mid-morning in 79 AD. <b>Capri</b> for the boat ride, the harbor, and a walk up to the gardens. Or the <b>Path of the Gods</b>, a ridge trail with the sea far below, for a day on your feet.</span></div>
+              <div class="detail"><span class="dk">In town</span><span class="dv">Sorrento itself is lemon groves, tiled churches, and a walkable old center for a slower version of the day.</span></div>
+              <div class="detail"><span class="dk">A quiet minute</span><span class="dv">This is your last evening in port before a Sunday at sea, so a Saturday-evening vigil Mass ashore is easy to fit in.</span></div>
+            </div></details>
+
+          <details class="day seg-sea" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 11</span><span class="ddate">Sun · Aug 9</span><span class="dtitle serif">A day at sea</span></div>
+            <span class="dcoord">AT SEA · westbound to Civitavecchia</span>
+            <p class="dshort">The one full day with nowhere to be. The ship turns west toward Rome and you get the version of a cruise everyone pictures: a long breakfast on your terrace, the thermal spa, a book by the pool, and no schedule at all. Use it to rest before the solo week in Italy.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">How to spend it</span><span class="dv">The thermal area, a long lunch, an hour on deck watching the water go by. This is the day the trip catches up with you before Rome.</span></div>
+              <div class="detail"><span class="dk">A quiet minute</span><span class="dv">The ship rarely carries a chaplain, so if keeping Sunday matters to you, catch a vigil Mass in Sorrento on Saturday or take a quiet hour on your terrace. Guest services can tell you if any service is scheduled.</span></div>
+              <div class="detail"><span class="dk">Mom</span><span class="dv">Pack tonight. You dock in the morning and your mother flies home from Rome.</span></div>
+            </div></details>
+
+          <details class="day seg-rome" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 12</span><span class="ddate">Mon · Aug 10</span><span class="dtitle serif">Off the ship, into Rome</span></div>
+            <span class="dcoord">CIVITAVECCHIA to ROMA · 41.9°N 12.5°E</span>
+            <p class="dshort">The week ends where your solo half begins. Your mother heads to the airport and you take the cruise train straight into Rome, drop your bags near Trastevere, and spend the first evening on a food walk through the old working-class quarter, eating from fried starters to gelato with a small group.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Mom</span><span class="dv">She takes a pre-booked shuttle from Civitavecchia to Fiumicino airport, about €40 to €55 and 45 minutes. Give her three hours before a flight back to the States.</span></div>
+              <div class="detail"><span class="dk">You into Rome</span><span class="dv">The <b>Civitavecchia Express</b> runs from the port to Roma San Pietro and Trastevere in about 40 minutes for €10. Drop your bags, then go find dinner.</span></div>
+              <div class="detail"><span class="dk">Evening</span><span class="dv">Book a <b>Trastevere food walk</b> (about $95 to $120, small group). You cross the cobbled lanes tasting supplì, a plate of cacio e pepe, porchetta, a glass of Frascati, and gelato to close. You eat it with the group, which is the easy way to eat well alone in Rome.</span></div>
+            </div></details>
+
+          <details class="day seg-rome" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 13</span><span class="ddate">Tue · Aug 11</span><span class="dtitle serif">Ancient Rome</span></div>
+            <span class="dcoord">ROMA · PALATINO · 41.89°N 12.49°E</span>
+            <p class="dshort">You give the morning to the Romans. A timed ticket gets you into the Colosseum, then you walk it off through the Forum and up the Palatine, the hill where the emperors lived, with the whole ancient city laid out below. The afternoon is the rest of the centro: the Pantheon, a couple of piazzas, and the Trevi Fountain.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Colosseum_at_sunset-Rome.JPG/1280px-Colosseum_at_sunset-Rome.JPG" alt="The Colosseum in Rome lit by warm sunset light" loading="lazy"></figure>
+              <div class="detail"><span class="dk">The ancient core</span><span class="dv">Book the combined <b>Colosseum, Forum, and Palatine</b> ticket (€18, good 24 hours) on colosseo.it. The Colosseum needs a timed slot, and the arena-floor and underground add-ons sell out first, so grab them early. Go at opening before the heat.</span></div>
+              <div class="detail"><span class="dk">Afternoon</span><span class="dv">Walk to the <b>Pantheon</b>, still roofed by its 2,000-year-old dome with the open eye at the top, then Piazza Navona and the Trevi Fountain. Refill your bottle at the nasoni, the little iron street fountains that run cold all over the city.</span></div>
+            </div></details>
+
+          <details class="day seg-rome" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 14</span><span class="ddate">Wed · Aug 12</span><span class="dtitle serif">The Vatican</span></div>
+            <span class="dcoord">CITTÀ DEL VATICANO · 41.90°N 12.45°E</span>
+            <p class="dshort">You go early to beat both the heat and the crowds. A guided early entry walks you through the Vatican Museums to the Sistine Chapel before the public doors open, then out into St. Peter's, where you can climb the dome for a view straight down the nave and out over the square.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Vatican_Sunrise_-_Flickr_-_radkuch.13.jpg/1280px-Vatican_Sunrise_-_Flickr_-_radkuch.13.jpg" alt="St. Peter's Square and Rome from above at sunrise" loading="lazy"></figure>
+              <div class="detail"><span class="dk">Museums and Sistine</span><span class="dv">Book an <b>early-entry guided tour</b> (about $60 to $85), or go on your own (€25) and reserve weeks ahead, since August fills. The galleries build for a mile toward the one room everyone comes for; getting there before opening is the difference between a quiet Sistine and a packed one.</span></div>
+              <div class="detail"><span class="dk">St. Peter's and the dome</span><span class="dv">The basilica is free to enter. The dome climb is €8 by stairs or €10 by lift plus 320 steps, and the reward is the view down onto the altar and out across the colonnade.</span></div>
+              <div class="detail"><span class="dk">Under the church</span><span class="dv">If you book it ahead, the <b>Scavi tour</b> takes a small group beneath the basilica to the necropolis and what is held to be St. Peter's tomb, one of the quietest and most affecting hours in Rome. There is no papal audience this week, since the Pope is at Castel Gandolfo for August.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-cin" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 15</span><span class="ddate">Thu · Aug 13</span><span class="dtitle serif">North to the Cinque Terre</span></div>
+            <span class="dcoord">LA SPEZIA to MONTEROSSO · 44.1°N 9.7°E</span>
+            <p class="dshort">You trade the city for the coast. A fast train carries you up to La Spezia in about three hours, and a little regional train drops you into Monterosso, the first of the five cliff villages. The rest of the day is a swim, a slow walk through town, and a glass of the local white while the light goes.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Getting there</span><span class="dv">Take a direct <b>Frecciarossa or Frecciabianca</b> from Rome to La Spezia, about three hours; book early for the €20 to €30 fare. Change to the Cinque Terre Express for the last few minutes into Monterosso. If the village rooms are booked or steep, base in La Spezia and ride in each morning.</span></div>
+              <div class="detail"><span class="dk">Settling in</span><span class="dv">Monterosso has the only real beach of the five. Swim, walk the seafront, and buy the <b>Cinque Terre Train Card</b> for tomorrow's hiking and hopping.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-cin" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 16</span><span class="ddate">Fri · Aug 14</span><span class="dtitle serif">The coastal hike</span></div>
+            <span class="dcoord">SENTIERO AZZURRO · 44.13°N 9.68°E</span>
+            <p class="dshort">The big walking day. You follow the old footpath that links the villages along the cliffs, Monterosso to Vernazza to Corniglia, up through vineyards and down into harbors, about four hours with real climbs and the sea always below you. You start early, before the heat and the crowds arrive.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Illuminated_Manarola_%2833190550796%29.jpg/1280px-Illuminated_Manarola_%2833190550796%29.jpg" alt="Manarola's colorful houses lit at dusk above the sea" loading="lazy"></figure>
+              <div class="detail"><span class="dk">The trail</span><span class="dv">The Blue Path from <b>Monterosso to Vernazza to Corniglia</b> is open in 2026, roughly 3.5 to 4 hours with steep stepped sections. Vernazza, halfway, is the prettiest of the five, so break there for coffee and a swim in the little harbor. The Corniglia-to-Manarola stretch is closed for landslide repairs until around 2028, so take the train across that gap.</span></div>
+              <div class="detail"><span class="dk">Do it well</span><span class="dv">Set off around 8:00, wear real shoes (they turn back people in flip-flops), and carry 1.5 to 2 liters of water. End the day at <b>Manarola</b> for the sunset from the rocks below the village, with a glass at the Nessun Dorma wine bar.</span></div>
+              <div class="detail"><span class="dk">With company</span><span class="dv">For someone to walk with, a small-group guided coastal or Sanctuary-trail hike runs about $50 to $90 and takes the navigation off your hands.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-cin" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 17</span><span class="ddate">Sat · Aug 15</span><span class="dtitle serif">Ferragosto, the day to plan around</span></div>
+            <span class="dcoord">VIA DELL'AMORE · 44.10°N 9.73°E</span>
+            <p class="dshort">August 15 is Ferragosto, Italy's biggest summer holiday, and the whole country goes to the coast. The villages are packed and the trains fill, so you plan around it: an early booked slot on the easy Via dell'Amore, a climb to the quiet high trails, or a boat day on the water. In the evening, the Assumption Mass in a village church is worth catching wherever you are.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Beat the crowds</span><span class="dv">Book a timed slot on the <b>Via dell'Amore</b>, the short paved path between Manarola and Riomaggiore, first thing. Or climb above the crowds on a <b>Sanctuary trail</b> to the hilltop shrines, where almost no one goes. Or skip the trains and take a boat between the villages.</span></div>
+              <div class="detail"><span class="dk">The holiday</span><span class="dv">Everything is fuller and pricier today, so lock trains and any transfer ahead. The Assumption is the reason for the holiday, and the Mass at Monterosso's San Giovanni Battista or Vernazza's seafront Santa Margherita is a good place to be for it.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-cin" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 18</span><span class="ddate">Sun · Aug 16</span><span class="dtitle serif">Home</span></div>
+            <span class="dcoord">LA SPEZIA to MILANO MXP · 45.6°N 8.7°E</span>
+            <p class="dshort">One last morning by the sea, a village Mass to close the trip if you want it, and then the long way home. You ride up to Milan, and the nonstop lands you back in Chicago the same evening.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The morning</span><span class="dv">Catch morning Mass in the village, then coffee and a last look at the water before you pack out.</span></div>
+              <div class="detail"><span class="dk">Getting home</span><span class="dv">Take the train from La Spezia to <b>Milan Malpensa</b>, about three to 3.5 hours, and fly the United nonstop from Milan to Chicago, about 8h50, arriving the same day. It is the cleanest exit, with no doubling back south.</span></div>
+              <div class="detail"><span class="dk">If the Pope matters</span><span class="dv">To reshape the end around seeing the Pope, cut a day here, finish near Rome, and go out to <b>Castel Gandolfo</b> on Sunday for the noon blessing (a 40-minute train, €2.60), flying home from Fiumicino.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-dol" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 15</span><span class="ddate">Thu · Aug 13</span><span class="dtitle serif">Up to the Dolomites</span></div>
+            <span class="dcoord">ROMA to BOLZANO to ORTISEI · 46.6°N 11.7°E</span>
+            <p class="dshort">This is the longer road, and the payoff is the Alps. A fast train runs up to Bolzano, then a bus climbs into Val Gardena to Ortisei, a valley town under jagged limestone peaks where they still speak German and Ladin. Figure five and a half to six hours door to valley, against three for the coast, so this is the choice for a hiker who wants the mountains.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Getting there</span><span class="dv">Take a <b>Freccia</b> from Rome to Bolzano, about 4.5 hours, then bus 170 or 350 up to Ortisei, about 40 minutes. Trenitalia's FRECCIALINK sells it as one through ticket.</span></div>
+              <div class="detail"><span class="dk">The valley</span><span class="dv">Ortisei is walkable, ringed by cable cars, and full of Südtirol cooking, more dumplings and speck than pasta. Walk the town and settle in for an early start.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-dol" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 16</span><span class="ddate">Fri · Aug 14</span><span class="dtitle serif">The Seceda ridge</span></div>
+            <span class="dcoord">SECEDA · 46.60°N 11.66°E · 2,500 m</span>
+            <p class="dshort">The signature Dolomites day. A cable car lifts you to 2,500 m, and you step out onto the Seceda ridge, a tilted green spine that drops away under the sawtooth Odle peaks. You walk the ridge and loop back down past a mountain hut for lunch, one of the great easy-to-moderate walks in the Alps.</p></summary>
+            <div class="daybody">
+              <figure class="dayfig"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Seceda%2C_Puez-Geisler%2C_Dolomites_-_Flickr_-_Dmitry_Djouce.jpg/960px-Seceda%2C_Puez-Geisler%2C_Dolomites_-_Flickr_-_Dmitry_Djouce.jpg" alt="The Seceda ridgeline sweeping up to the jagged Odle peaks" loading="lazy"></figure>
+              <div class="detail"><span class="dk">The hike</span><span class="dv">Ride the Ortisei-Furnes-Seceda cableway (book the 2026 time slot ahead, since it is a new requirement, about €59 to €74 round trip). From the top, walk the ridge and loop down toward Rifugio Firenze, about three to four hours, and stop at a hut for barley soup and strudel.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-dol" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 17</span><span class="ddate">Sat · Aug 15</span><span class="dtitle serif">Alpe di Siusi</span></div>
+            <span class="dcoord">ALPE DI SIUSI · 46.55°N 11.60°E</span>
+            <p class="dshort">Ferragosto up here is calm while the coast is chaos. You ride the cable car onto the Alpe di Siusi, the largest high-alpine meadow in Europe, and walk easy loops across the grass under the Sassolungo massif, with huts scattered over the plateau for lunch.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">Take the Mont Sëuc cable car up from Ortisei, then walk the meadow loops, about 2.5 to 3 hours, flat and wide open, with the peaks all around. Lunch is at a malga, a mountain dairy hut, on the plateau.</span></div>
+            </div></details>
+
+          <details class="day seg-coda coda-dol" open><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 18</span><span class="ddate">Sun · Aug 16</span><span class="dtitle serif">Home</span></div>
+            <span class="dcoord">ORTISEI to MILANO MXP · 45.6°N 8.7°E</span>
+            <p class="dshort">A last Sunday Mass in the valley church, then the trip down out of the mountains and the flight home to Chicago.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The morning</span><span class="dv">Catch Sunday Mass at the Ortisei parish church, then pack out.</span></div>
+              <div class="detail"><span class="dk">Getting home</span><span class="dv">Bus down to Bolzano, train to Milan, about 3.5 hours, and the United nonstop from Milan to Chicago. The Dolomites are too far north to add a Castel Gandolfo papal visit, so that trade only works if you finish near Rome.</span></div>
+            </div></details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experiences">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Guided outings</span>
+        <h2 class="serif">The experiences, gathered</h2>
+        <p class="lede">Guided outings work well when you travel alone. You get company, someone else handles the route, and the food tours give you a table to sit at. Here is the shortlist worth booking, by place.</p>
+      </div>
+      <div class="grid g3 reveal">
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-bcn)"></span><span class="place">Barcelona</span></div>
+          <h3 class="serif">Montserrat and Sant Jeroni</h3>
+          <div class="meta"><span class="chip self">Self-guided day</span><span class="chip">~$70 with tickets</span></div>
+          <p class="why">A monastery, the Black Madonna, and a ridge hike. Faith and hiking in one day, easy to do on your own by train.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-bcn)"></span><span class="place">Barcelona</span></div>
+          <h3 class="serif">El Born tapas and wine tour</h3>
+          <div class="meta"><span class="chip guided">Guided · 3h</span><span class="chip">~$95 to $130</span><span class="chip">up to 8</span></div>
+          <p class="why">Family-run stops with everything included. A good way to meet people on your first night.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-bcn)"></span><span class="place">Barcelona</span></div>
+          <h3 class="serif">Paella or tapas cooking class</h3>
+          <div class="meta"><span class="chip guided">Guided · 3 to 4h</span><span class="chip">~$100</span></div>
+          <p class="why">Hands-on and small. You cook it, then sit down and eat with the group.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-sea)"></span><span class="place">Tunisia</span></div>
+          <h3 class="serif">Carthage and Sidi Bou Said</h3>
+          <div class="meta"><span class="chip guided">Guided · half day</span><span class="chip">shore tour</span></div>
+          <p class="why">Ancient ruins and a blue-and-white cliff village. Go with a local guide.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-sea)"></span><span class="place">Sicily</span></div>
+          <h3 class="serif">Mount Etna 4x4 and crater walk</h3>
+          <div class="meta"><span class="chip guided">Guided · half day</span><span class="chip">volcano hike</span></div>
+          <p class="why">Up the volcano to the crater rim, your one alpine day mid-cruise. Wear closed shoes.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-sea)"></span><span class="place">Amalfi</span></div>
+          <h3 class="serif">Path of the Gods hike</h3>
+          <div class="meta"><span class="chip guided">Guided or self</span><span class="chip">from Sorrento</span></div>
+          <p class="why">A trail high above the coast, the pick for the Sorrento day if you want to be on your feet.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Rome</span></div>
+          <h3 class="serif">Early-entry Vatican and Sistine</h3>
+          <div class="meta"><span class="chip guided">Guided · 3h</span><span class="chip">~$60 to $85</span></div>
+          <p class="why">The Sistine Chapel before the public doors open. Worth it in August heat and crowds.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Rome</span></div>
+          <h3 class="serif">Trastevere food tour</h3>
+          <div class="meta"><span class="chip guided">Guided · 3h</span><span class="chip">~$95 to $120</span><span class="chip">up to 12</span></div>
+          <p class="why">Supplì, carbonara, porchetta, gelato, and wine. The easiest good dinner to do solo in Rome.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-coda)"></span><span class="place">Cinque Terre</span></div>
+          <h3 class="serif">Guided coastal hike</h3>
+          <div class="meta"><span class="chip guided">Guided · half day</span><span class="chip">~$50 to $90</span></div>
+          <p class="why">The Blue Path with a guide who knows which sections are open. Company and safety on hot summer trails.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solo">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Traveling alone</span>
+        <h2 class="serif">The solo playbook</h2>
+        <p class="lede">The habits that make two weeks alone work, and the few ways solo travelers get burned.</p>
+      </div>
+      <div class="grid g2 reveal">
+        <div class="card"><h3 class="serif">Eating alone</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">Make lunch the big meal. Spain's menú del día and Italy's pranzo cost less, and a table for one at 1pm draws no attention. Sit at the bar or counter when you can: tapas bars, cicchetti counters, pizza al taglio. In Italy, aperitivo hour from 6 to 8pm often comes with a buffet, which makes a cheap, social light dinner. Book one food tour and one class per city early for built-in company.</p></div>
+        <div class="card"><h3 class="serif">Not getting pickpocketed</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">Barcelona and Rome rank among the worst cities for tourist theft. The hotspots are La Rambla, the Boqueria, the Sagrada queue, and Metro L3 in Barcelona; Termini, the Trevi Fountain, the Colosseum, and bus 64 in Rome. Your assault risk is low, but you make a prime target for distraction theft when you travel alone and look at a map. Wear a zipped crossbody in front, keep your wallet in a front pocket, never put your phone on the table, and split your cash and cards.</p></div>
+        <div class="card"><h3 class="serif">Beating the August heat</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">August can reach the high 90s Fahrenheit. Do the hard sightseeing at opening: towers, the Vatican, the Colosseum, and hikes. Slow down or go indoors midday, then start again after 5pm. Carry a refillable bottle, since Rome's nasoni fountains are free and everywhere, plus electrolytes, a hat, and sunscreen. Ferragosto on Aug 15 packs the trains and raises prices, so book the 15th and 16th ahead.</p></div>
+        <div class="card"><h3 class="serif">A faith rhythm to travel by</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">A Sunday Mass gives a solo week a fixed point. The 9am international Mass at Sagrada Família, St. Peter's in Rome, and the village churches in the Cinque Terre are all free and worth arriving early for. On the cruise's sea-day Sunday, catch a port Mass the day before or take a quiet hour. To see the Pope in mid-August, go to the Castel Gandolfo Angelus.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="budget">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What it costs</span>
+        <h2 class="serif">The budget</h2>
+        <p class="lede">Your share, with economy flights, 4-star hotels, and sharing the Explora suite with your mother. The cruise fare drives the total, and it is the number I checked live from the cruise lines.</p>
+      </div>
+      <div class="budget-wrap reveal">
+        <table class="bt">
+          <thead><tr><th>Line item</th><th>Low</th><th>Typical</th><th>High</th></tr></thead>
+          <tbody>
+            <tr><td class="item">Cruise, your share (7 nts, all-inclusive)</td><td>$3,800</td><td class="typ">$5,500</td><td>$8,000</td></tr>
+            <tr><td class="item">Flights, open-jaw, economy</td><td>$850</td><td class="typ">$1,150</td><td>$1,500</td></tr>
+            <tr><td class="item">Hotels, 8 land nights, 4-star</td><td>$1,600</td><td class="typ">$2,080</td><td>$2,900</td></tr>
+            <tr><td class="item">Food, incl. tour and class</td><td>$510</td><td class="typ">$830</td><td>$1,270</td></tr>
+            <tr><td class="item">Insurance, your policy</td><td>$350</td><td class="typ">$550</td><td>$950</td></tr>
+            <tr><td class="item">Activities and tickets</td><td>$200</td><td class="typ">$350</td><td>$600</td></tr>
+            <tr><td class="item">Ground transport</td><td>$150</td><td class="typ">$250</td><td>$450</td></tr>
+            <tr><td class="item">Onboard extras and misc</td><td>$100</td><td class="typ">$450</td><td>$1,100</td></tr>
+            <tr class="total"><td>Total, your cost</td><td>~$7,600</td><td>~$11,200</td><td>~$16,800</td></tr>
+          </tbody>
+        </table>
+        <div style="display:flex; flex-direction:column; gap:16px">
+          <div class="bud-bars" aria-hidden="true">
+            <div class="bbar hero-bar"><div class="bb-top"><span class="bb-name">Cruise</span><span class="bb-val">$5,500</span></div><div class="bb-track" title="Low $3,800, typical $5,500, high $8,000"><div class="bb-fill" style="width:100%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Hotels</span><span class="bb-val">$2,080</span></div><div class="bb-track" title="Low $1,600, typical $2,080, high $2,900"><div class="bb-fill" style="width:38%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Flights</span><span class="bb-val">$1,150</span></div><div class="bb-track" title="Low $850, typical $1,150, high $1,500"><div class="bb-fill" style="width:21%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Food</span><span class="bb-val">$830</span></div><div class="bb-track" title="Low $510, typical $830, high $1,270"><div class="bb-fill" style="width:15%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Insurance</span><span class="bb-val">$550</span></div><div class="bb-track" title="Low $350, typical $550, high $950"><div class="bb-fill" style="width:10%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Extras and misc</span><span class="bb-val">$450</span></div><div class="bb-track" title="Onboard extras, activities, ground transport, eSIM"><div class="bb-fill" style="width:8%"></div></div></div>
+          </div>
+          <div class="callout">
+            <div class="k">Two things push it past $12k</div>
+            <p>Flying business adds $3,000 to $4,400, and 5-star hotels add $1,200 to $3,500. Pick at most one to stay near budget.</p>
+          </div>
+          <div class="callout">
+            <div class="k">If your mother joins on land</div>
+            <p>Then you drop the cruise and travel Spain and Italy by train. That land version runs about $5,600 for your share. <a href="./land.html" target="_blank" rel="noopener">See it here →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="book">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Book in this order</span>
+        <h2 class="serif">What to book, and when</h2>
+        <p class="lede">Ordered by how fast each one sells out. The cruise cabin is the only piece that is truly time-critical; the rest follows from your dates.</p>
+      </div>
+      <div class="checklist reveal">
+        <div class="ci perish"><div class="ct"><h4>Book the cruise suite: Explora I (Aug 3) or Silver Ray (Aug 2)</h4><p>The one thing that sells out and will not come back. Choose the suite category. <a href="https://explorajourneys.com/us/en/destinations-globe/med/journeys/bcncvv-07-v11?id-journey=EX20260803BCNCVV" target="_blank" rel="noopener">Explora ↗</a> · <a href="https://www.silversea.com/destinations/mediterranean-cruise/monte-carlo-to-civitavecchia-rome-ra260802007" target="_blank" rel="noopener">Silversea ↗</a></p></div><div class="when">This week</div></div>
+        <div class="ci perish"><div class="ct"><h4>Book the open-jaw flights: ORD to BCN, MXP to ORD</h4><p>One multi-city fare. Reprice monthly and lock 3 to 4 months out. The United nonstop MXP to Chicago pairs with either last leg.</p></div><div class="when">Now to 8 wks</div></div>
+        <div class="ci"><div class="ct"><h4>Book Vatican and Colosseum timed tickets</h4><p>August sells out about 3 to 4 weeks ahead, and early-entry Vatican and arena-floor Colosseum go first. <a href="https://www.museivaticani.va" target="_blank" rel="noopener">museivaticani.va</a> · <a href="https://colosseo.it" target="_blank" rel="noopener">colosseo.it</a></p></div><div class="when">3 to 4 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Book Sagrada Família and Park Güell timed entry</h4><p>Centenary year, so book as soon as your dates are set. Confirm the basilica is open first. <a href="https://sagradafamilia.org/en/tickets-individuals" target="_blank" rel="noopener">sagradafamilia.org</a></p></div><div class="when">2 to 4 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Book the Rome to La Spezia (or Bolzano) Freccia</h4><p>Advance fares around €20 to €30 rise to about €70 as August fills. Choose the direct train.</p></div><div class="when">Early</div></div>
+        <div class="ci"><div class="ct"><h4>Book Ferragosto lodging (Aug 13 to 16)</h4><p>Rooms in Monterosso, La Spezia, or Ortisei over the Aug 15 weekend go fast and jump in price.</p></div><div class="when">ASAP</div></div>
+        <div class="ci"><div class="ct"><h4>Book food tours, a cooking class, and guided hikes</h4><p>The Barcelona tapas tour, the Rome food tour, a cooking class. Confirm they run Aug 15 and 16, since small groups fill.</p></div><div class="when">2 to 3 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Buy insurance and an eSIM</h4><p>Get a comprehensive policy (about 4 to 6% of the trip), and insure your mother on her own age-rated policy. Buy a Europe eSIM (about $5 to $8) before you leave.</p></div><div class="when">Before you go</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="verify reveal">
+        <h4>Verify before booking</h4>
+        <b>The Explora and Silversea fares were pulled live from the cruise lines on Jul 8, 2026; the other prices are researched planning targets, not quotes.</b> Cruise fares move with promotions and availability, so reconfirm at booking. Closer to the date, also re-check the exact Explora port times, whether Sagrada Família is open during centenary works, the papal schedule at Castel Gandolfo on Aug 15 and 16, and the Cinque Terre Card holiday pricing.
+      </div>
+      <div style="height:20px"></div>
+      <h4>Key sources</h4>
+      <div class="fl">
+        <a href="https://explorajourneys.com/us/en/ships/explora-I" target="_blank" rel="noopener">Explora I</a>
+        <a href="https://www.silversea.com/destinations/mediterranean-cruise/monte-carlo-to-civitavecchia-rome-ra260802007" target="_blank" rel="noopener">Silver Ray</a>
+        <a href="https://sagradafamilia.org/en/worship-at-the-basilica" target="_blank" rel="noopener">Sagrada Mass</a>
+        <a href="https://www.cremallerademontserrat.cat/en/shop/combined-tickets/trans-montserrat/" target="_blank" rel="noopener">Trans Montserrat</a>
+        <a href="https://www.museivaticani.va" target="_blank" rel="noopener">Vatican</a>
+        <a href="https://colosseo.it" target="_blank" rel="noopener">Colosseum</a>
+        <a href="https://cinqueterreriviera.com/cinque-terre-card-guide/" target="_blank" rel="noopener">Cinque Terre Card</a>
+      </div>
+      <h4>Photography</h4>
+      <p style="margin:0 0 14px; line-height:1.55">All photos via Wikimedia Commons under CC or public-domain licenses: Explora I © Matti Blume (CC BY-SA); at-sea banner © Mike McBey (CC BY); Silver Ray © Alexandre Prevot (CC BY-SA); Montserrat © Mike McBey (CC BY); Sagrada Família © Julian Lupyan (CC0); Sidi Bou Said © Mstyslav Chernov (CC BY-SA); Taormina © Grey48 (CC0); Positano © Nicola Cerroni (CC BY-SA); Colosseum © Gilbert Bochenek (CC BY); St. Peter's © Radek Kucharski (CC BY); Manarola © kuhnmi (CC BY); Seceda © Dmitry Djouce (CC BY).</p>
+      <p style="margin:0; color:var(--ink-faint)">A working plan. The dates, the ships, and the last-leg choice are all changeable. Prices are in USD unless noted.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var trip = document.getElementById('trip');
+  var btns = document.querySelectorAll('[data-set-coda]');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      trip.setAttribute('data-coda', b.getAttribute('data-set-coda'));
+      btns.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+    });
+  });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>

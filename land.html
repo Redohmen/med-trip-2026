@@ -1,0 +1,653 @@
+<title>Spain and Italy by Land, No Cruise · Aug 2026</title>
+<style>
+  :root{
+    --bg:#E7ECEC; --surface:#F4F7F6; --surface-2:#FCFDFD;
+    --ink:#0E2A34; --ink-soft:#46626B; --ink-faint:#7C949B;
+    --line:#CFDBDB; --line-strong:#B4C6C6;
+    --brass:#8C641B; --brass-fill:#B98A2E; --brass-bright:#C89A3E;
+    --azure:#2C7C9E;
+    --seg-bcn:#c9531f; --seg-sea:#2a78d6; --seg-rome:#cf3b3a; --seg-coda:#0a7d17; --seg-travel:#4a3aa7;
+    --shadow:0 1px 2px rgba(14,42,52,.06), 0 8px 26px rgba(14,42,52,.07);
+    --shadow-soft:0 1px 2px rgba(14,42,52,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#081C25; --surface:#0F2C38; --surface-2:#153845;
+      --ink:#EAF1F1; --ink-soft:#A7BEC4; --ink-faint:#71909A;
+      --line:#204350; --line-strong:#2C5261;
+      --brass:#DcB667; --brass-fill:#C8A24B; --brass-bright:#EBCE82;
+      --azure:#5BB0D0;
+      --seg-bcn:#e07044; --seg-sea:#4e97ea; --seg-rome:#eb7a7a; --seg-coda:#46b552; --seg-travel:#9c92ef;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+      --shadow-soft:0 1px 2px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#081C25; --surface:#0F2C38; --surface-2:#153845;
+    --ink:#EAF1F1; --ink-soft:#A7BEC4; --ink-faint:#71909A;
+    --line:#204350; --line-strong:#2C5261;
+    --brass:#DcB667; --brass-fill:#C8A24B; --brass-bright:#EBCE82;
+    --azure:#5BB0D0;
+    --seg-bcn:#e07044; --seg-sea:#4e97ea; --seg-rome:#eb7a7a; --seg-coda:#46b552; --seg-travel:#9c92ef;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    --shadow-soft:0 1px 2px rgba(0,0,0,.3);
+  }
+  :root[data-theme="light"]{
+    --bg:#E7ECEC; --surface:#F4F7F6; --surface-2:#FCFDFD;
+    --ink:#0E2A34; --ink-soft:#46626B; --ink-faint:#7C949B;
+    --line:#CFDBDB; --line-strong:#B4C6C6;
+    --brass:#8C641B; --brass-fill:#B98A2E; --brass-bright:#C89A3E;
+    --azure:#2C7C9E;
+    --seg-bcn:#c9531f; --seg-sea:#2a78d6; --seg-rome:#cf3b3a; --seg-coda:#0a7d17; --seg-travel:#4a3aa7;
+    --shadow:0 1px 2px rgba(14,42,52,.06), 0 8px 26px rgba(14,42,52,.07);
+    --shadow-soft:0 1px 2px rgba(14,42,52,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{margin:0}
+  .page{background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif}
+  .wrap{max-width:940px; margin:0 auto; padding:0 22px}
+  a{color:var(--brass); text-underline-offset:3px; text-decoration-thickness:1px}
+  a:hover{color:var(--brass-bright)}
+  :focus-visible{outline:2px solid var(--brass-bright); outline-offset:2px; border-radius:3px}
+  .eyebrow{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); font-weight:600}
+  h1,h2,h3{text-wrap:balance; margin:0}
+  .section{padding:64px 0; border-top:1px solid var(--line)}
+  .section-head{margin-bottom:30px}
+  .section-head h2{font-size:clamp(26px,4.4vw,38px); line-height:1.08; font-weight:600; letter-spacing:-.01em; margin:12px 0 0}
+  .section-head p.lede{color:var(--ink-soft); font-size:18px; margin:14px 0 0; max-width:66ch}
+  .controls{position:sticky; top:0; z-index:40; backdrop-filter:saturate(1.3) blur(10px); background:color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--line)}
+  .controls .row{display:flex; flex-wrap:wrap; gap:14px 26px; align-items:center; padding:11px 22px; max-width:940px; margin:0 auto}
+  .controls .brandmark{display:flex; align-items:center; gap:9px; margin-right:auto; font-weight:600; letter-spacing:-.01em}
+  .controls .brandmark .compass{width:19px;height:19px;flex:none;color:var(--brass)}
+  .switch{display:flex; align-items:center; gap:9px}
+  .switch .lbl{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .seg{display:inline-flex; background:var(--surface); border:1px solid var(--line-strong); border-radius:999px; padding:3px; gap:2px}
+  .seg button{font:inherit; font-size:13.5px; font-weight:550; cursor:pointer; border:0; background:transparent; color:var(--ink-soft); padding:5px 13px; border-radius:999px; line-height:1.2; transition:color .15s, background .15s}
+  .seg button[aria-pressed="true"]{background:var(--brass-fill); color:#1a1205}
+  .seg button:hover:not([aria-pressed="true"]){color:var(--ink)}
+  .hero{padding:56px 0 46px}
+  .hero h1{font-size:clamp(34px,6.4vw,60px); line-height:1.02; font-weight:600; letter-spacing:-.02em; margin:20px 0 0}
+  .hero h1 em{font-style:italic; color:var(--brass)}
+  .hero .dek{font-size:clamp(17px,2.3vw,21px); color:var(--ink-soft); max-width:64ch; margin:22px 0 0; line-height:1.5}
+  .statrow{display:flex; flex-wrap:wrap; gap:12px; margin-top:34px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:14px 17px; box-shadow:var(--shadow-soft); flex:1 1 150px; min-width:140px}
+  .stat .k{font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .stat .v{font-size:22px; font-weight:600; letter-spacing:-.01em; margin-top:5px; line-height:1.12}
+  .stat .v small{font-size:13.5px; font-weight:500; color:var(--ink-soft); display:block; margin-top:2px}
+  .routemap{margin-top:38px; border:1px solid var(--line); background:var(--surface); border-radius:16px; padding:22px 8px 12px; box-shadow:var(--shadow-soft); overflow-x:auto}
+  .routemap svg{display:block; min-width:720px; width:100%; height:auto}
+  .grid{display:grid; gap:16px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:760px){ .g2,.g3{grid-template-columns:1fr} }
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:15px; padding:22px; box-shadow:var(--shadow-soft)}
+  .card h3{font-size:19px; font-weight:600; letter-spacing:-.01em}
+  .pitch-ports{list-style:none; margin:0; padding:0; display:flex; flex-direction:column}
+  .pitch-ports li{display:grid; grid-template-columns:150px 1fr; gap:14px; padding:11px 0; border-top:1px solid var(--line); align-items:baseline}
+  .pitch-ports li:first-child{border-top:0}
+  .pitch-ports .pp{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--seg-rome); font-weight:700}
+  .pitch-ports .pd{font-size:15px; color:var(--ink-soft); line-height:1.45}
+  @media (max-width:620px){ .pitch-ports li{grid-template-columns:1fr; gap:2px} }
+  .voyage{position:relative; margin-top:6px}
+  .voyage::before{content:""; position:absolute; left:19px; top:6px; bottom:40px; width:2px; background:linear-gradient(var(--brass-fill), color-mix(in srgb,var(--brass-fill) 25%, transparent)); border-radius:2px}
+  @media (max-width:620px){ .voyage::before{left:13px} }
+  .day{position:relative; margin:0 0 12px 0; padding-left:52px}
+  @media (max-width:620px){ .day{padding-left:40px} }
+  .day > summary{list-style:none; cursor:pointer; display:block; background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:15px 18px; box-shadow:var(--shadow-soft); transition:border-color .15s, box-shadow .15s; position:relative}
+  .day > summary::-webkit-details-marker{display:none}
+  .day > summary:hover{border-color:var(--line-strong); box-shadow:var(--shadow)}
+  .day[open] > summary{border-color:color-mix(in srgb,var(--brass-fill) 45%, var(--line)); border-bottom-left-radius:0; border-bottom-right-radius:0}
+  .node{position:absolute; left:11px; top:20px; width:18px; height:18px; border-radius:50%; background:var(--surface); border:3px solid var(--seg, var(--brass-fill)); box-shadow:0 0 0 3px var(--bg); z-index:2}
+  @media (max-width:620px){ .node{left:5px} }
+  .day.seg-bcn{--seg:var(--seg-bcn)} .day.seg-rome{--seg:var(--seg-rome)} .day.seg-coda{--seg:var(--seg-coda)} .day.seg-travel{--seg:var(--seg-travel)}
+  .day .dhead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .day .dnum{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12px; color:var(--ink-faint); font-weight:600; letter-spacing:.05em}
+  .day .ddate{font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:12.5px; font-weight:700; color:var(--seg,var(--brass)); letter-spacing:.02em; text-transform:uppercase}
+  .day .dtitle{font-size:18px; font-weight:600; letter-spacing:-.01em; flex-basis:100%; margin-top:1px}
+  .day .dcoord{display:block; font-family:"SFMono-Regular","SF Mono","Consolas",ui-monospace,monospace; font-size:11px; letter-spacing:.11em; color:var(--ink-faint); text-transform:uppercase; margin-top:7px}
+  .day .dshort{color:var(--ink-soft); font-size:15px; margin-top:7px; line-height:1.45}
+  .day .chev{position:absolute; right:16px; top:18px; color:var(--ink-faint); transition:transform .2s}
+  .day[open] .chev{transform:rotate(90deg)}
+  .daybody{background:var(--surface-2); border:1px solid color-mix(in srgb,var(--brass-fill) 45%, var(--line)); border-top:0; border-radius:0 0 13px 13px; padding:4px 18px 18px; box-shadow:var(--shadow-soft)}
+  .detail{display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--line)}
+  .detail:first-child{border-top:0}
+  .detail .dk{flex:none; width:104px; font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--brass); font-weight:700; padding-top:2px}
+  .detail .dv{font-size:15px; color:var(--ink-soft); line-height:1.5}
+  .detail .dv b{color:var(--ink); font-weight:600}
+  @media (max-width:620px){ .detail{flex-direction:column; gap:3px} .detail .dk{width:auto} }
+  #trip[data-coda="north"] .day.fin-south{display:none}
+  #trip[data-coda="south"] .day.fin-north{display:none}
+  .legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin:20px 0 4px}
+  .legend .li{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft); font-weight:550}
+  .legend .dot{width:11px; height:11px; border-radius:50%; flex:none}
+  .xp{display:flex; flex-direction:column; gap:8px}
+  .xp .xhead{display:flex; align-items:center; gap:9px}
+  .xp .dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .xp .place{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); font-weight:700}
+  .xp h3{font-size:17.5px; font-weight:600; letter-spacing:-.01em; line-height:1.2}
+  .xp .meta{display:flex; flex-wrap:wrap; gap:7px; margin-top:2px}
+  .chip{font-size:11.5px; font-weight:650; padding:3px 9px; border-radius:7px; background:var(--surface-2); border:1px solid var(--line); color:var(--ink-soft)}
+  .chip.guided{background:color-mix(in srgb,var(--brass-fill) 18%, var(--surface)); border-color:color-mix(in srgb,var(--brass-fill) 34%, transparent); color:var(--brass)}
+  .chip.self{background:color-mix(in srgb,var(--azure) 16%, var(--surface)); border-color:color-mix(in srgb,var(--azure) 30%, transparent); color:var(--azure)}
+  .xp .why{font-size:14px; color:var(--ink-soft); line-height:1.45; margin-top:4px}
+  .budget-wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:26px; align-items:start}
+  @media (max-width:820px){ .budget-wrap{grid-template-columns:1fr} }
+  table.bt{width:100%; border-collapse:collapse; font-size:15px}
+  table.bt th,table.bt td{padding:9px 8px; text-align:right; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums}
+  table.bt th:first-child,table.bt td:first-child{text-align:left}
+  table.bt thead th{font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-faint); font-weight:700; border-bottom-color:var(--line-strong)}
+  table.bt td.item{color:var(--ink); font-weight:550}
+  table.bt tr.total td{border-top:2px solid var(--line-strong); border-bottom:0; font-weight:700; color:var(--ink); font-size:16px; padding-top:12px}
+  table.bt td.typ{color:var(--ink); font-weight:600}
+  .bud-bars{display:flex; flex-direction:column; gap:11px}
+  .bbar{display:flex; flex-direction:column; gap:4px}
+  .bbar .bb-top{display:flex; justify-content:space-between; font-size:13.5px}
+  .bbar .bb-name{color:var(--ink-soft); font-weight:600}
+  .bbar .bb-val{color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums}
+  .bb-track{height:12px; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; overflow:hidden}
+  .bb-fill{height:100%; background:var(--brass-fill); border-radius:6px}
+  .bbar.hero-bar .bb-fill{background:var(--brass-bright)}
+  .callout{background:color-mix(in srgb,var(--brass-fill) 10%, var(--surface)); border:1px solid color-mix(in srgb,var(--brass-fill) 32%, var(--line)); border-radius:13px; padding:16px 18px}
+  .callout .k{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); font-weight:700}
+  .callout p{margin:6px 0 0; font-size:15px; color:var(--ink-soft)}
+  .checklist{display:flex; flex-direction:column; gap:10px; counter-reset:ck}
+  .ci{display:flex; gap:15px; background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:15px 18px; box-shadow:var(--shadow-soft)}
+  .ci::before{counter-increment:ck; content:counter(ck,decimal-leading-zero); font-family:ui-monospace,monospace; font-size:13px; font-weight:700; color:var(--brass); flex:none; padding-top:2px; min-width:26px}
+  .ci .ct{flex:1}
+  .ci .ct h4{margin:0; font-size:16px; font-weight:600}
+  .ci .ct p{margin:3px 0 0; font-size:14px; color:var(--ink-soft)}
+  .ci .when{flex:none; font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); align-self:center; text-align:right; max-width:110px}
+  .ci.perish{border-color:color-mix(in srgb,var(--brass-fill) 50%, var(--line))}
+  .ci.perish .when{color:var(--brass)}
+  .foot{padding:44px 0 60px; border-top:1px solid var(--line); color:var(--ink-faint); font-size:13.5px}
+  .foot h4{color:var(--ink-soft); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 10px}
+  .foot .fl{display:flex; flex-wrap:wrap; gap:6px 16px; margin-bottom:18px}
+  .verify{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 18px; line-height:1.55}
+  .verify b{color:var(--ink)}
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none} }
+</style>
+
+<div class="page">
+
+  <div class="controls">
+    <div class="row">
+      <span class="brandmark">
+        <svg class="compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke-width="1.2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor" stroke="none"/></svg>
+        Land version · no cruise
+      </span>
+      <span class="switch">
+        <span class="lbl">Hiking finish</span>
+        <span class="seg" role="group" aria-label="Choose the final hiking days">
+          <button data-set-coda="north" aria-pressed="true">Cinque Terre</button>
+          <button data-set-coda="south" aria-pressed="false">Stay south</button>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <header class="hero wrap">
+    <span class="eyebrow">August 2026 · the no-cruise alternative</span>
+    <h1 class="serif">Barcelona, the Amalfi Coast, and the <em>Cinque Terre</em>.</h1>
+    <p class="dek">The same trip without a ship. You spend three days in Barcelona, fly to the Amalfi Coast where your mother joins you for five days in Sorrento, then hike on your own along the Path of the Gods and through the Cinque Terre. It costs about half the cruise version and runs on flights and trains instead.</p>
+
+    <div class="statrow">
+      <div class="stat"><div class="k">Dates</div><div class="v">Jul 30 – Aug 16<small>2026</small></div></div>
+      <div class="stat"><div class="k">Route</div><div class="v">Barcelona to the coast<small>fly, then trains</small></div></div>
+      <div class="stat"><div class="k">Mom's part</div><div class="v">5 days<small>Sorrento, Aug 4 to 9</small></div></div>
+      <div class="stat"><div class="k">Your cost</div><div class="v">~$5,100<small>about half the cruise</small></div></div>
+    </div>
+
+    <div class="routemap" aria-label="Route from Barcelona by air to Naples and Sorrento, then by train to the Cinque Terre and Milan">
+      <svg viewBox="0 0 900 150" role="img">
+        <title>Route from Barcelona to Naples and Sorrento, then north to the Cinque Terre and Milan</title>
+        <defs><linearGradient id="rl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--brass-fill)"/><stop offset="1" stop-color="var(--brass-bright)"/></linearGradient></defs>
+        <path d="M40 96 C 200 96, 260 60, 380 70 S 560 110, 640 96 S 760 66, 860 46" fill="none" stroke="url(#rl)" stroke-width="2.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+        <g font-family="ui-monospace,monospace" font-size="11" font-weight="700" text-anchor="middle">
+          <g><circle cx="40" cy="96" r="6" fill="var(--seg-bcn)"/><text x="42" y="120" fill="var(--ink)">BARCELONA</text><text x="42" y="134" fill="var(--ink-faint)" font-size="9">3 DAYS</text></g>
+          <text x="210" y="70" fill="var(--ink-faint)" font-size="9">✈ fly</text>
+          <g><circle cx="380" cy="70" r="6" fill="var(--seg-rome)"/><text x="380" y="54" fill="var(--ink)">SORRENTO</text><text x="380" y="41" fill="var(--ink-faint)" font-size="9">MOM · 5 DAYS</text></g>
+          <circle cx="470" cy="82" r="4.5" fill="var(--seg-rome)"/><text x="470" y="102" fill="var(--ink-soft)" font-size="10">Path of the Gods</text>
+          <text x="600" y="112" fill="var(--ink-faint)" font-size="9">train north</text>
+          <g><circle cx="720" cy="76" r="6" fill="var(--seg-coda)"/><text x="720" y="60" fill="var(--ink)">CINQUE TERRE</text></g>
+          <g><circle cx="860" cy="46" r="5.5" fill="var(--seg-travel)"/><text x="856" y="32" fill="var(--ink)" font-size="10">MILAN ✈</text></g>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ===== HOW IT DIFFERS ===== -->
+  <section class="section" id="compare">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Land version vs cruise version</span>
+        <h2 class="serif">How this one is different</h2>
+        <p class="lede">This is the alternative if your mother would rather not sail. You lose the island-hopping (Ibiza, Tunis, Malta, Sicily) that only a ship reaches, and you take on more of your own logistics. You gain a lower cost, more days, and full flexibility.</p>
+      </div>
+      <div class="grid g2 reveal">
+        <div class="card"><h3 class="serif">What you give up</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">The ship's easy rhythm, one unpack for the week, and the ports you can only reach by sea. You now book hotels, trains, and transfers yourself, and you carry your bags between cities. Peak-August rooms on the Amalfi Coast and in the Cinque Terre run high.</p></div>
+        <div class="card"><h3 class="serif">What you gain</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">Your cost drops to about $5,100 from about $11,200, since there is no cruise fare. You get roughly two weeks instead of one on the water, more hiking (Path of the Gods plus the Cinque Terre), and you can change any day on the fly.</p></div>
+      </div>
+      <div class="callout reveal" style="margin-top:16px">
+        <div class="k">The cruise version</div>
+        <p>If your mother does want the ship, the cruise plan is the other page. It keeps the island ports and hands her a comfortable week with one unpack. <a href="./index.html">Open the cruise version →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOM'S PART ===== -->
+  <section class="section" id="momside">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">For your mom</span>
+        <h2 class="serif">Her five days on the Amalfi Coast</h2>
+        <p class="lede">She flies in and out of Naples and stays in one hotel in Sorrento the whole time, so she never repacks. Sorrento is flat and walkable, and the scenic days come to her by boat or private car. Here is the plain version.</p>
+      </div>
+      <div class="grid g2 reveal">
+        <div class="card"><h3 class="serif">One easy base</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">Sorrento sits on a cliff over the bay, with traffic-free lanes, plenty of restaurants, and an easy pace. She unpacks once and stays put for five nights. Naples airport is about 1 to 1.5 hours away by private car (about €90 to €120, door to door).</p></div>
+        <div class="card"><h3 class="serif">Days that take no effort</h3>
+          <p style="color:var(--ink-soft); margin:10px 0 0; font-size:15.5px">A private driver runs the Amalfi Coast day, a boat runs the Capri day, and a guide runs Pompeii. She sets the pace and never chases a bus. You attend Sunday Mass together in Sorrento on Aug 9 before she flies home.</p></div>
+      </div>
+      <div class="card reveal" style="margin-top:16px">
+        <h3 class="serif" style="margin-bottom:12px">What she does, day by day</h3>
+        <ul class="pitch-ports">
+          <li><span class="pp">Aug 4, arrive</span><span class="pd">Fly into Naples, private car to Sorrento, welcome dinner.</span></li>
+          <li><span class="pp">Aug 5, Capri</span><span class="pd">A relaxed boat day to Capri, back by mid-afternoon.</span></li>
+          <li><span class="pp">Aug 6, Amalfi</span><span class="pd">A private driver along the coast: Positano, Amalfi, and the gardens at Ravello, with a long lunch.</span></li>
+          <li><span class="pp">Aug 7, Pompeii</span><span class="pd">Pompeii with a guide in the morning, or a lemon-grove tasting or cooking class if the ruins feel like too much heat.</span></li>
+          <li><span class="pp">Aug 8, at ease</span><span class="pd">A free day in Sorrento: Marina Grande, the shops, the pool.</span></li>
+          <li><span class="pp">Aug 9, Mass</span><span class="pd">Sunday Mass together at Sorrento Cathedral, then she flies home from Naples.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ITINERARY ===== -->
+  <section class="section" id="itinerary">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Day by day</span>
+        <h2 class="serif">The itinerary, start to finish</h2>
+        <p class="lede">Tap any day to open it. The switch up top sets your hiking finish: go north to the Cinque Terre for village-to-village trails, or stay south for more of the Amalfi Coast.</p>
+      </div>
+
+      <div class="legend reveal" aria-hidden="true">
+        <span class="li"><span class="dot" style="background:var(--seg-travel)"></span>Travel</span>
+        <span class="li"><span class="dot" style="background:var(--seg-bcn)"></span>Barcelona</span>
+        <span class="li"><span class="dot" style="background:var(--seg-rome)"></span>Amalfi Coast</span>
+        <span class="li"><span class="dot" style="background:var(--seg-coda)"></span>Hiking finish</span>
+      </div>
+
+      <div id="trip" data-coda="north">
+        <div class="voyage">
+
+          <details class="day seg-travel"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 01</span><span class="ddate">Thu · Jul 30</span><span class="dtitle serif">Fly to Barcelona</span></div>
+            <span class="dcoord">CHICAGO ORD · 41.9°N 87.9°W</span>
+            <p class="dshort">An evening flight from Chicago to Barcelona, overnight, about 8h40. Sleep on the plane.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Flight</span><span class="dv">Fly nonstop on United, American, Iberia, or Level. Leaving Thursday gives you a full Montserrat day.</span></div>
+            </div></details>
+
+          <details class="day seg-bcn"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 02</span><span class="ddate">Fri · Jul 31</span><span class="dtitle serif">Arrive in Barcelona</span></div>
+            <span class="dcoord">BARCELONA · 41.4°N 2.17°E</span>
+            <p class="dshort">Land in the morning. Take the first day easy.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Afternoon</span><span class="dv">Walk the Gothic Quarter and the Cathedral, and eat at a La Boqueria counter (El Quim or Bar Pinotxo).</span></div>
+              <div class="detail"><span class="dk">Guided evening</span><span class="dv">A small-group tapas and wine tour in El Born (about $95 to $130). A good way to meet people on night one.</span></div>
+              <div class="detail"><span class="dk">Watch</span><span class="dv">La Rambla and the Boqueria draw pickpockets. Keep your bag zipped and in front.</span></div>
+            </div></details>
+
+          <details class="day seg-bcn"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 03</span><span class="ddate">Sat · Aug 1</span><span class="dtitle serif">Montserrat and the summit hike</span></div>
+            <span class="dcoord">MONTSERRAT · 41.6°N 1.83°E · 1,236 m</span>
+            <p class="dshort">A monastery, the Black Madonna, and a real mountain hike.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Getting there</span><span class="dv">Take the FGC <b>R5</b> from Plaça d'Espanya, about 1 hour, and buy the <b>Trans Montserrat</b> pass (€43.80).</span></div>
+              <div class="detail"><span class="dk">The hike</span><span class="dv">Ride the Sant Joan funicular up, then walk the ridge to <b>Sant Jeroni</b> for wide views.</span></div>
+              <div class="detail"><span class="dk">Faith</span><span class="dv">Visit the basilica and the <b>Black Madonna</b> (monastery ticket €18, cover shoulders and knees).</span></div>
+            </div></details>
+
+          <details class="day seg-bcn"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 04</span><span class="ddate">Sun · Aug 2</span><span class="dtitle serif">Mass at Sagrada, then Gaudí</span></div>
+            <span class="dcoord">SAGRADA FAMÍLIA · 41.40°N 2.17°E</span>
+            <p class="dshort">The 9am Mass inside Sagrada Família, then Gaudí's main sites.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Faith</span><span class="dv">The <b>9:00am international Mass</b> at Sagrada Família is free and needs no ticket. Doors open at 8:30 at the Nativity façade. Check the basilica is open first.</span></div>
+              <div class="detail"><span class="dk">Then</span><span class="dv">Book <b>Park Güell</b> around 10:30 (€18), and a separate Sagrada tower ticket (€36) for the afternoon.</span></div>
+            </div></details>
+
+          <details class="day seg-travel"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 05</span><span class="ddate">Mon · Aug 3</span><span class="dtitle serif">Fly to Naples, drive to Sorrento</span></div>
+            <span class="dcoord">BARCELONA to NAPLES · 40.6°N 14.4°E</span>
+            <p class="dshort">A short flight south, then a private transfer to the coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Flight</span><span class="dv">Fly <b>Barcelona to Naples</b> (Vueling, about 1h55, roughly €25 to €150). Book it by mid-June, since August is peak.</span></div>
+              <div class="detail"><span class="dk">To Sorrento</span><span class="dv">Take a private car, about 1 to 1.5 hours (~€90 to €120), or the Curreri shuttle bus (~€10, 75 min). Settle in for the evening.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 06</span><span class="ddate">Tue · Aug 4</span><span class="dtitle serif">Mom arrives in Sorrento</span></div>
+            <span class="dcoord">SORRENTO · 40.63°N 14.37°E</span>
+            <p class="dshort">Your mother flies into Naples and joins you on the coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Mom</span><span class="dv">She flies into Naples; a private car brings her to Sorrento. Keep the day easy: walk the town, see Marina Grande, and have a welcome dinner.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 07</span><span class="ddate">Wed · Aug 5</span><span class="dtitle serif">Capri by boat</span></div>
+            <span class="dcoord">CAPRI · 40.55°N 14.24°E</span>
+            <p class="dshort">A relaxed island day, back by mid-afternoon.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Guided</span><span class="dv">A small-group or private boat from Sorrento (~$65 to $160 pp small-group). Cruise the island, see the Blue Grotto if the water allows, and walk La Piazzetta.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 08</span><span class="ddate">Thu · Aug 6</span><span class="dtitle serif">The Amalfi Coast by private driver</span></div>
+            <span class="dcoord">POSITANO · AMALFI · RAVELLO</span>
+            <p class="dshort">The scenic drive, at her pace, with a long lunch.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Guided</span><span class="dv">A private Mercedes driver runs Positano, Amalfi, and the gardens at <b>Ravello</b> (Villa Rufolo), with door-to-door pickup (~€300 to €500 for the car, split between you).</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 09</span><span class="ddate">Fri · Aug 7</span><span class="dtitle serif">Pompeii, or a gentler day</span></div>
+            <span class="dcoord">POMPEII · 40.75°N 14.49°E</span>
+            <p class="dshort">Ancient ruins with a guide, or a shaded tasting instead.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Guided</span><span class="dv"><b>Pompeii with a licensed guide</b>, morning start to beat the heat; mostly flat, big payoff.</span></div>
+              <div class="detail"><span class="dk">Gentler option</span><span class="dv">A Sorrento lemon-grove and limoncello tasting, or a cooking class. Both are sit-down and shaded.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 10</span><span class="ddate">Sat · Aug 8</span><span class="dtitle serif">A day at ease in Sorrento</span></div>
+            <span class="dcoord">SORRENTO · 40.63°N 14.37°E</span>
+            <p class="dshort">Nothing scheduled: town, water, and rest.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">Marina Grande for lunch, the shops in the old town, and a pool or spa afternoon for her. An easy last full day together.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 11</span><span class="ddate">Sun · Aug 9</span><span class="dtitle serif">Mass together, then Mom flies home</span></div>
+            <span class="dcoord">SORRENTO CATHEDRAL · 40.63°N 14.37°E</span>
+            <p class="dshort">A Sunday Mass together, then she heads to the airport.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Faith</span><span class="dv">Sunday Mass at <b>Sorrento Cathedral</b> (summer Sundays around 08:30, 11:15, 18:00) or the Basilica di Sant'Antonino.</span></div>
+              <div class="detail"><span class="dk">Mom</span><span class="dv">A private car takes her to Naples airport for her flight home. You have an easy afternoon and prep your hiking gear.</span></div>
+            </div></details>
+
+          <details class="day seg-rome"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 12</span><span class="ddate">Mon · Aug 10</span><span class="dtitle serif">Path of the Gods</span></div>
+            <span class="dcoord">SENTIERO DEGLI DEI · 40.62°N 14.55°E</span>
+            <p class="dshort">The cliff-top trail from Bomerano down toward Positano.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The hike</span><span class="dv">Take a private transfer to <b>Bomerano</b> for a ~7:30am start (~€40 to €80), then walk to Nocelle, about 5.5 to 8 km and 2 to 3 hours, mostly level with real cliff views. Add the steps down to Positano if you want.</span></div>
+              <div class="detail"><span class="dk">Do it self-guided</span><span class="dv">The trail is well-marked (CAI #327). Skip the guide, buy the one-way transfer, and start early. Carry 1.5 to 2 liters of water and wear real shoes.</span></div>
+              <div class="detail"><span class="dk">Back</span><span class="dv">Ferry or bus from Positano back to Sorrento.</span></div>
+            </div></details>
+
+          <!-- ===== FINISH: NORTH (CINQUE TERRE) ===== -->
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 13</span><span class="ddate">Tue · Aug 11</span><span class="dtitle serif">Train north to the Cinque Terre</span></div>
+            <span class="dcoord">NAPLES to MONTEROSSO · 44.1°N 9.7°E</span>
+            <p class="dshort">A long train day up to the Ligurian coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Getting there</span><span class="dv">Train <b>Naples to La Spezia</b>, about 4.5 to 5 hours via Rome or Florence, then the regional to <b>Monterosso</b>. Book the fast leg early.</span></div>
+              <div class="detail"><span class="dk">Evening</span><span class="dv">Swim, walk the village, and buy the <b>Cinque Terre Train Card</b>.</span></div>
+            </div></details>
+
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 14</span><span class="ddate">Wed · Aug 12</span><span class="dtitle serif">The coastal hike</span></div>
+            <span class="dcoord">SENTIERO AZZURRO · 44.13°N 9.68°E</span>
+            <p class="dshort">Monterosso to Vernazza to Corniglia on foot.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The hike</span><span class="dv">The Blue Path <b>Monterosso to Vernazza to Corniglia</b> is open in 2026, about 3.5 to 4 hours. The Corniglia to Manarola section is closed for repairs until about 2028, so take the train across that gap. Check the park's live trail status the morning of.</span></div>
+              <div class="detail"><span class="dk">Start early</span><span class="dv">Set out around 8:00 to beat the heat and crowds; real shoes, plenty of water.</span></div>
+            </div></details>
+
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 15</span><span class="ddate">Thu · Aug 13</span><span class="dtitle serif">The high trails</span></div>
+            <span class="dcoord">SANCTUARY TRAILS · 44.12°N 9.70°E</span>
+            <p class="dshort">Quieter ridge and sanctuary paths above the villages.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">Walk a higher route, such as the Levanto to Monterosso ridge or a sanctuary trail above a village. Fewer people, wider views, and cooler in the morning.</span></div>
+            </div></details>
+
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 16</span><span class="ddate">Fri · Aug 14</span><span class="dtitle serif">Portovenere by boat</span></div>
+            <span class="dcoord">PORTOVENERE · 44.05°N 9.84°E</span>
+            <p class="dshort">A boat day and the two southern villages.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">See Manarola and Riomaggiore, then take the boat to <b>Portovenere</b> for the harbor and the church on the point. An easy buffer day before travel.</span></div>
+            </div></details>
+
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 17</span><span class="ddate">Sat · Aug 15</span><span class="dtitle serif">Ferragosto, then to the airport city</span></div>
+            <span class="dcoord">to PISA or MILANO · 45.6°N 8.7°E</span>
+            <p class="dshort">Italy's biggest holiday. Move on a booked train.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Travel</span><span class="dv">Take a pre-booked train to <b>Pisa</b> (about 1.5 hours, the tower is right by the station) or <b>Milan</b> (about 3 hours). Stay near the airport. Everything is crowded today, so book ahead.</span></div>
+            </div></details>
+
+          <details class="day seg-coda fin-north"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 18</span><span class="ddate">Sun · Aug 16</span><span class="dtitle serif">Sunday Mass, then fly home</span></div>
+            <span class="dcoord">PISA or MILANO MXP · 45.6°N 8.7°E</span>
+            <p class="dshort">A last Mass, then the flight to Chicago.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Faith</span><span class="dv">Go to Sunday morning Mass near your hotel, or a Saturday-evening vigil the night before.</span></div>
+              <div class="detail"><span class="dk">Fly home</span><span class="dv">Fly from <b>Pisa</b> if you route through Europe, or from <b>Milan Malpensa</b> for a nonstop to Chicago. Milan has far more long-haul options.</span></div>
+            </div></details>
+
+          <!-- ===== FINISH: STAY SOUTH ===== -->
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 13</span><span class="ddate">Tue · Aug 11</span><span class="dtitle serif">Valle delle Ferriere</span></div>
+            <span class="dcoord">above AMALFI · 40.65°N 14.58°E</span>
+            <p class="dshort">A green waterfall valley above the coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The hike</span><span class="dv">The <b>Valle delle Ferriere</b> above Amalfi is a shaded fern-and-waterfall walk, a cool contrast to the Path of the Gods. About 3 to 4 hours, moderate.</span></div>
+            </div></details>
+
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 14</span><span class="ddate">Wed · Aug 12</span><span class="dtitle serif">Capri on foot</span></div>
+            <span class="dcoord">CAPRI · 40.55°N 14.24°E</span>
+            <p class="dshort">The island on foot, before the day boats arrive.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">Walk to the <b>Arco Naturale</b> and Villa Jovis, or the Pizzolungo path under the Faraglioni. Go early, before the day boats arrive.</span></div>
+            </div></details>
+
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 15</span><span class="ddate">Thu · Aug 13</span><span class="dtitle serif">A second Path-of-the-Gods area day</span></div>
+            <span class="dcoord">AGEROLA · 40.63°N 14.54°E</span>
+            <p class="dshort">More of the high trails above the coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">Hike another Agerola-area route, or repeat the Path of the Gods in the reverse, cooler direction. Or take a Sorrento cooking class if you want a rest day.</span></div>
+            </div></details>
+
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 16</span><span class="ddate">Fri · Aug 14</span><span class="dtitle serif">Herculaneum and Vesuvius</span></div>
+            <span class="dcoord">ERCOLANO · 40.81°N 14.35°E</span>
+            <p class="dshort">A smaller, better-preserved Pompeii, and the volcano.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv"><b>Herculaneum</b> is more intact and less crowded than Pompeii, and you can add a <b>Vesuvius</b> crater walk. Or spend the day on a boat if you would rather stay on the water.</span></div>
+            </div></details>
+
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 17</span><span class="ddate">Sat · Aug 15</span><span class="dtitle serif">Ferragosto in Sorrento</span></div>
+            <span class="dcoord">SORRENTO · 40.63°N 14.37°E</span>
+            <p class="dshort">Italy's biggest holiday, spent at the coast.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">The day</span><span class="dv">A relaxed beach-club or pool day, since the roads and boats are packed. A quiet buffer before flying out.</span></div>
+            </div></details>
+
+          <details class="day seg-rome fin-south"><summary><span class="node"></span><span class="chev">›</span>
+            <div class="dhead"><span class="dnum">DAY 18</span><span class="ddate">Sun · Aug 16</span><span class="dtitle serif">Sunday Mass, then fly home</span></div>
+            <span class="dcoord">SORRENTO to NAPLES or ROME</span>
+            <p class="dshort">A last Mass on the coast, then the flight home.</p></summary>
+            <div class="daybody">
+              <div class="detail"><span class="dk">Faith</span><span class="dv">Sunday Mass at Sorrento Cathedral.</span></div>
+              <div class="detail"><span class="dk">Fly home</span><span class="dv">Private car to <b>Naples</b> for a European connection, or the train to <b>Rome</b> for a nonstop to Chicago.</span></div>
+            </div></details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCES ===== -->
+  <section class="section" id="experiences">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Guided outings</span>
+        <h2 class="serif">The experiences, gathered</h2>
+        <p class="lede">The outings worth booking, by place. The guided ones give you company and hand off the logistics; the hikes you do on your own.</p>
+      </div>
+      <div class="grid g3 reveal">
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-bcn)"></span><span class="place">Barcelona</span></div>
+          <h3 class="serif">Montserrat and Sant Jeroni</h3>
+          <div class="meta"><span class="chip self">Self-guided day</span><span class="chip">~$70 with tickets</span></div>
+          <p class="why">A monastery, the Black Madonna, and a ridge hike. Faith and hiking in one day.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-bcn)"></span><span class="place">Barcelona</span></div>
+          <h3 class="serif">El Born tapas and wine tour</h3>
+          <div class="meta"><span class="chip guided">Guided · 3h</span><span class="chip">~$95 to $130</span></div>
+          <p class="why">Family-run stops with everything included. A good way to meet people on your first night.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Amalfi Coast</span></div>
+          <h3 class="serif">Private-driver Amalfi day</h3>
+          <div class="meta"><span class="chip guided">Guided · full day</span><span class="chip">~€300 to €500 / car</span></div>
+          <p class="why">Positano, Amalfi, and Ravello with no bus scrums. She sets the pace.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Amalfi Coast</span></div>
+          <h3 class="serif">Capri boat day</h3>
+          <div class="meta"><span class="chip guided">Guided · half day</span><span class="chip">~$65 to $160</span></div>
+          <p class="why">An island cruise from Sorrento, back by mid-afternoon. Easy and scenic.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Amalfi Coast</span></div>
+          <h3 class="serif">Pompeii with a guide</h3>
+          <div class="meta"><span class="chip guided">Guided · half day</span><span class="chip">morning start</span></div>
+          <p class="why">Mostly flat, huge payoff, and a guide brings it to life. Beat the heat early.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Amalfi Coast</span></div>
+          <h3 class="serif">Path of the Gods</h3>
+          <div class="meta"><span class="chip self">Self-guided</span><span class="chip">transfer ~€40 to €80</span></div>
+          <p class="why">A cliff-top trail from Bomerano toward Positano. Do it alone; just buy the ride to the start.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-coda)"></span><span class="place">Cinque Terre</span></div>
+          <h3 class="serif">Village-to-village trails</h3>
+          <div class="meta"><span class="chip self">Self-guided</span><span class="chip">Cinque Terre Card</span></div>
+          <p class="why">Three days of coastal and high trails between the five villages. Check open sections the morning of.</p></div>
+        <div class="card xp"><div class="xhead"><span class="dot" style="background:var(--seg-rome)"></span><span class="place">Sorrento</span></div>
+          <h3 class="serif">Lemon grove or cooking class</h3>
+          <div class="meta"><span class="chip guided">Guided · 2 to 3h</span><span class="chip">shaded, sit-down</span></div>
+          <p class="why">A gentle, her-paced afternoon if the ruins in August feel like too much.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUDGET ===== -->
+  <section class="section" id="budget">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">What it costs</span>
+        <h2 class="serif">The budget</h2>
+        <p class="lede">Your cost, with economy flights and 4-star hotels, and your mother's costs kept separate. This runs about half the cruise version, since there is no cruise fare, though the extra land nights and peak-August coast hotels eat into the gap.</p>
+      </div>
+      <div class="budget-wrap reveal">
+        <table class="bt">
+          <thead><tr><th>Line item</th><th>Low</th><th>Typical</th><th>High</th></tr></thead>
+          <tbody>
+            <tr><td class="item">Transatlantic air (open-jaw)</td><td>$650</td><td class="typ">$1,000</td><td>$1,500</td></tr>
+            <tr><td class="item">Hotels, ~13 nights</td><td>$1,850</td><td class="typ">$2,700</td><td>$4,200</td></tr>
+            <tr><td class="item">Food, ~15 days</td><td>$570</td><td class="typ">$980</td><td>$1,600</td></tr>
+            <tr><td class="item">Activities and guides</td><td>$220</td><td class="typ">$430</td><td>$760</td></tr>
+            <tr><td class="item">Trains, ferries, transfers</td><td>$130</td><td class="typ">$270</td><td>$490</td></tr>
+            <tr><td class="item">Barcelona to Naples flight</td><td>$30</td><td class="typ">$80</td><td>$165</td></tr>
+            <tr><td class="item">Insurance</td><td>$55</td><td class="typ">$100</td><td>$195</td></tr>
+            <tr class="total"><td>Total, your cost</td><td>~$3,500</td><td>~$5,600</td><td>~$8,900</td></tr>
+          </tbody>
+        </table>
+        <div style="display:flex; flex-direction:column; gap:16px">
+          <div class="bud-bars" aria-hidden="true">
+            <div class="bbar hero-bar"><div class="bb-top"><span class="bb-name">Hotels</span><span class="bb-val">$2,700</span></div><div class="bb-track" title="Low $1,850, typical $2,700, high $4,200"><div class="bb-fill" style="width:100%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Transatlantic air</span><span class="bb-val">$1,000</span></div><div class="bb-track" title="Low $650, typical $1,000, high $1,500"><div class="bb-fill" style="width:37%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Food</span><span class="bb-val">$980</span></div><div class="bb-track" title="Low $570, typical $980, high $1,600"><div class="bb-fill" style="width:36%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Activities</span><span class="bb-val">$430</span></div><div class="bb-track" title="Low $220, typical $430, high $760"><div class="bb-fill" style="width:16%"></div></div></div>
+            <div class="bbar"><div class="bb-top"><span class="bb-name">Trains and transfers</span><span class="bb-val">$270</span></div><div class="bb-track" title="Low $130, typical $270, high $490"><div class="bb-fill" style="width:10%"></div></div></div>
+          </div>
+          <div class="callout">
+            <div class="k">Where it drifts</div>
+            <p>The big swing is the coast hotels in peak August. You cut the most by sharing the Sorrento room with your mother during her five days, and by booking the Cinque Terre rooms early.</p>
+          </div>
+          <div class="callout">
+            <div class="k">Versus the cruise</div>
+            <p>The cruise version runs about $11,200 for your share, since a luxury cabin is the bulk of it. This land trip runs about $5,600 for double the land nights, but you handle all the logistics yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHECKLIST ===== -->
+  <section class="section" id="book">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Book in this order</span>
+        <h2 class="serif">What to book, and when</h2>
+        <p class="lede">Peak-August rooms on the coast and in the Cinque Terre are the tight pieces here, more than any flight.</p>
+      </div>
+      <div class="checklist reveal">
+        <div class="ci perish"><div class="ct"><h4>Book Sorrento and Cinque Terre hotels</h4><p>The tightest, priciest pieces in August. Lock Sorrento for Mom's segment and the Cinque Terre rooms first.</p></div><div class="when">This week</div></div>
+        <div class="ci perish"><div class="ct"><h4>Book the transatlantic open-jaw: ORD to BCN, PSA or MXP to ORD</h4><p>One multi-city fare. Milan Malpensa has the nonstop home; Pisa is closer to the Cinque Terre for a European connection.</p></div><div class="when">Now to 8 wks</div></div>
+        <div class="ci"><div class="ct"><h4>Book the Barcelona to Naples flight</h4><p>Vueling is direct and cheap if booked early. Aim for Aug 3, the day after the Barcelona Sunday.</p></div><div class="when">By mid-June</div></div>
+        <div class="ci"><div class="ct"><h4>Book the coast experiences</h4><p>The private Amalfi driver, the Capri boat, and the Pompeii guide for Mom's days. Small groups and good drivers fill up.</p></div><div class="when">3 to 4 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Book the Path of the Gods transfer</h4><p>A one-way private car to Bomerano so you can start by 7:30am. No guide needed.</p></div><div class="when">2 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Book Sagrada Família and Park Güell, and the Naples train</h4><p>Timed tickets for Barcelona (centenary year), and the fast Naples to La Spezia train for the cheap advance fare.</p></div><div class="when">2 to 4 wks out</div></div>
+        <div class="ci"><div class="ct"><h4>Buy insurance and an eSIM</h4><p>A comprehensive policy for you, her own age-rated policy for her, and a Europe eSIM before you leave.</p></div><div class="when">Before you go</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="verify reveal">
+        <h4>Verify before booking</h4>
+        <b>Fares and times were researched Jul 8, 2026, so treat them as planning targets, not quotes.</b> Closer to the date, re-check whether Sagrada Família is open during centenary works, the Cinque Terre trail status for August (the open sections change year to year), the Barcelona to Naples flight schedule, and Sorrento Cathedral's summer Mass times.
+      </div>
+      <div style="height:20px"></div>
+      <h4>Key sources</h4>
+      <div class="fl">
+        <a href="https://www.positano.com/en/e/il-sentiero-degli-dei" target="_blank" rel="noopener">Path of the Gods</a>
+        <a href="https://www.vueling.com/en/flights-from-barcelona-to-naples" target="_blank" rel="noopener">BCN to Naples</a>
+        <a href="https://sorrentolimo.com/how-distant-is-naples-airport-from-sorrento-the-best-way-to-travel-there/" target="_blank" rel="noopener">Naples to Sorrento</a>
+        <a href="https://cinqueterreriviera.com/cinque-terre-card-guide/" target="_blank" rel="noopener">Cinque Terre Card</a>
+        <a href="https://www.italythisway.com/places/sorrento-cathedral.php" target="_blank" rel="noopener">Sorrento Cathedral</a>
+      </div>
+      <p style="margin:0; color:var(--ink-faint)">The no-cruise alternative to the main plan. Dates and the hiking-finish choice are changeable. Prices in USD unless noted.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var trip = document.getElementById('trip');
+  var btns = document.querySelectorAll('[data-set-coda]');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      trip.setAttribute('data-coda', b.getAttribute('data-set-coda'));
+      btns.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+    });
+  });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
